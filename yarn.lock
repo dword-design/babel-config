@@ -1463,6 +1463,10 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
+chdir@dword-design/node-chdir#fork:
+  version "0.0.0"
+  resolved "https://codeload.github.com/dword-design/node-chdir/tar.gz/55004473579e2b8d293ced5410af5948793971b6"
+
 child-process-promise@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/child-process-promise/-/child-process-promise-2.2.1.tgz#4730a11ef610fad450b8f223c79d31d7bdad8074"
@@ -2426,7 +2430,7 @@ glob@7.1.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.1.2, glob@^7.1.3, glob@~7.1.4:
+glob@^7.0.0, glob@^7.1.2, glob@^7.1.3, glob@^7.1.5, glob@~7.1.4:
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.5.tgz#6714c69bee20f3c3e64c4dd905553e532b40cdc0"
   integrity sha512-J9dlskqUXK1OeTOYBEn5s8aMukWMwWfs+rPTn/jn50Ux4MNXVhubL1wu/j2t+H4NVI+cXEcCaYellqaPVGXNqQ==
@@ -3479,6 +3483,16 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+mocha-per-file@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/mocha-per-file/-/mocha-per-file-1.1.2.tgz#3733d33d22b5e0c801e9a470c12c6e2a24bf2c67"
+  integrity sha512-kkEBkjm12DUjrMteUulGZQEuiO3NsyYfzDSQlxF8PPMaIqIXnoeVwbCvg0dHTzaAsD6yZdg6A3X8+1MFktanfA==
+  dependencies:
+    chdir dword-design/node-chdir#fork
+    child-process-promise "^2.2.1"
+    glob "^7.1.5"
+    mocha "^6.2.2"
 
 mocha@^6.2.2:
   version "6.2.2"

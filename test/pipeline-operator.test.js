@@ -4,8 +4,10 @@ const { spawn } = require('child-process-promise')
 const { outputFile } = require('fs-extra')
 const { resolve } = require('path')
 
-it('pipeline operator', () => withLocalTmpDir(__dirname, async () => {
+exports.it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('src/index.js', 'export default 1 |> x => x * 2')
   await spawn('babel', ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'])
   expect(require(resolve('dist'))).toEqual(2)
-})).timeout(5000)
+})
+
+exports.timeout = 5000

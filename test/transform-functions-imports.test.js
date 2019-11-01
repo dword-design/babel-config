@@ -5,11 +5,13 @@ const { outputFile } = require('fs-extra')
 const { resolve } = require('path')
 const endent = require('endent')
 
-it('transform functions imports', () => withLocalTmpDir(__dirname, async () => {
+exports.it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('src/index.js', endent`
     import { map } from '@dword-design/functions'
     export default [1, 2] |> map(x => x * 2)
   `)
   await spawn('babel', ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'])
   expect(require(resolve('dist'))).toEqual([2, 4])
-})).timeout(5000)
+})
+
+exports.timeout = 5000
