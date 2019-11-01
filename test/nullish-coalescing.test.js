@@ -12,4 +12,4 @@ it('nullish coalescing', () => withLocalTmpDir(__dirname, async () => {
   `)
   await spawn('babel', ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'])
   expect(require(resolve('dist'))).toBeUndefined()
-}))
+})).timeout(5000)

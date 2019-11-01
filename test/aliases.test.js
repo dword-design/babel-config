@@ -12,4 +12,4 @@ it('aliases', () => withLocalTmpDir(__dirname, async () => {
   `)
   await spawn('babel', ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'])
   expect(require(resolve('dist'))).toEqual([2, 4])
-}))
+})).timeout(5000)
