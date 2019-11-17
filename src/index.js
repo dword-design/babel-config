@@ -1,17 +1,17 @@
-const aliases = require('@dword-design/aliases')
+import aliases from '@dword-design/aliases'
 
-module.exports = {
+export default {
   presets: [
-    ['@babel/preset-env', { targets: { node: 10 } }],
+    [require.resolve('@babel/preset-env'), { targets: { node: 10 } }],
   ],
   plugins: [
-    '@babel/plugin-proposal-optional-chaining',
-    '@babel/plugin-proposal-nullish-coalescing-operator',
-    ['@babel/plugin-proposal-pipeline-operator', { proposal: 'fsharp' }],
-    'babel-plugin-add-module-exports',
-    ['babel-plugin-module-resolver', { alias: aliases }],
-    ['babel-plugin-transform-imports', {
-      '@dword-design/functions': { transform: "@dword-design/functions/dist/${member}" },
+    require.resolve('@babel/plugin-proposal-optional-chaining'),
+    require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
+    [require.resolve('@babel/plugin-proposal-pipeline-operator'), { proposal: 'fsharp' }],
+    require.resolve('babel-plugin-add-module-exports'),
+    [require.resolve('babel-plugin-module-resolver'), { alias: aliases }],
+    [require.resolve('babel-plugin-transform-imports'), {
+      '@dword-design/functions': { transform: '@dword-design/functions/dist/${member}' },
     }],
   ],
 }
