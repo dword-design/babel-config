@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "base-node prepare",
+    "start": "base-node start",
     "test": "base-node test"
   },
   "dependencies": {
@@ -23,7 +24,7 @@
     "babel-plugin-transform-imports": "^2.0.0"
   },
   "devDependencies": {
-    "@dword-design/base-node": "^0.4.4",
+    "@dword-design/base-node": "^1.0.0",
     "expect": "^24.9.0",
     "with-local-tmp-dir": "^2.1.0"
   }
