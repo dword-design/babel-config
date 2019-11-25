@@ -1,6 +1,6 @@
 {
   "name": "@dword-design/babel-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -30,7 +30,8 @@
   },
   "maintainers": [],
   "contributors": [
-    "dword-design (http://www.dword-design.de)"
+    "dword-design (http://www.dword-design.de)",
+    "Renovate Bot (http://renovatebot.com)"
   ],
   "bugs": {
     "url": "https://github.com/dword-design/babel-config/issues"
