@@ -1,15 +1,22 @@
 {
   "name": "@dword-design/babel-config",
   "version": "1.0.3",
-  "main": "dist/index.js",
+  "bugs": {
+    "url": "https://github.com/dword-design/babel-config/issues"
+  },
+  "repository": "dword-design/babel-config",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "contributors": [
+    "dword-design (http://www.dword-design.de)",
+    "Renovate Bot (http://renovatebot.com)"
+  ],
   "files": [
     "dist"
   ],
-  "repository": "dword-design/babel-config",
-  "author": "Sebastian Landwehr <info@dword-design.de>",
-  "license": "MIT",
+  "main": "dist/index.js",
   "scripts": {
-    "prepare": "base-node prepare",
+    "prepublishOnly": "base-node build",
     "start": "base-node start",
     "test": "base-node test"
   },
@@ -28,12 +35,5 @@
     "expect": "^24.9.0",
     "with-local-tmp-dir": "^2.1.0"
   },
-  "maintainers": [],
-  "contributors": [
-    "dword-design (http://www.dword-design.de)",
-    "Renovate Bot (http://renovatebot.com)"
-  ],
-  "bugs": {
-    "url": "https://github.com/dword-design/babel-config/issues"
-  }
+  "maintainers": []
 }
