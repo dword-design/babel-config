@@ -730,9 +730,9 @@
     to-fast-properties "^2.0.0"
 
 "@dword-design/babel-config@^1.0.0", "@dword-design/babel-config@^1.0.4":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.7.tgz#dcd0403eb59aa6a784676a47cc3a17f10d0f29fc"
-  integrity sha512-tZvGkuyoy6u97fFKzGirqy85KHDkcPHlHlVpdAjY/PnLaevBlOyFln0GnBVoGwXN9me2f72rGe5DV+qrj/Xcxw==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-1.0.8.tgz#ac0d496020de7fb24c6e91b4a1f7ba9d91e7076c"
+  integrity sha512-AFj28z0jB9DvwWcu3cjIQ22YlGue6dTOLf02r/oRXjBwql1Q7q3cSRwCPOXQ9qRY5jQDSGSirQ5djnihCYuhBA==
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.4.4"
     "@babel/plugin-proposal-optional-chaining" "^7.6.0"
