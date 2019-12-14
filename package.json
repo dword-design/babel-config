@@ -36,6 +36,7 @@
     "fs-extra": "^8.1.0",
     "module-alias": "^2.2.2",
     "output-files": "^1.1.10",
+    "stealthy-require": "^1.1.1",
     "with-local-tmp-dir": "^2.1.0"
   },
   "contributors": [
