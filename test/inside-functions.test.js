@@ -5,6 +5,7 @@ import outputFiles from 'output-files'
 import { resolve } from 'path'
 import { endent } from '@dword-design/functions'
 import moduleAlias from 'module-alias'
+import stealthyRequire from 'stealthy-require'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFiles({
@@ -23,7 +24,7 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
     ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'],
     { env: { ...process.env, NODE_ENV: 'test' } },
   )
-  moduleAlias.addAliases(require('@dword-design/test-aliases'))
+  moduleAlias.addAliases(stealthyRequire(require.cache, () => require('@dword-design/test-aliases')))
   expect(require(resolve('dist'))).toEqual(1)
 })
 
