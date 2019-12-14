@@ -1,9 +1,9 @@
 import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
-import { spawn } from 'child_process'
-import { outputFile } from 'fs'
+import { spawn } from 'child-process-promise'
+import { outputFile } from 'fs-extra'
 import { resolve } from 'path'
-import { endent } from '@functions'
+import { endent } from '@dword-design/functions'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('src/index.js', endent`

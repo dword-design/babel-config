@@ -1,7 +1,7 @@
 import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
-import { spawn } from 'child_process'
-import { outputFile } from 'fs'
+import { spawn } from 'child-process-promise'
+import { outputFile } from 'fs-extra'
 import { resolve } from 'path'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
