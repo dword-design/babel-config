@@ -4,7 +4,6 @@ import { spawn } from 'child-process-promise'
 import outputFiles from 'output-files'
 import { resolve } from 'path'
 import { endent } from '@dword-design/functions'
-import moduleAlias from 'module-alias'
 import stealthyRequire from 'stealthy-require'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
@@ -19,12 +18,13 @@ export const it = () => withLocalTmpDir(__dirname, async () => {
       'abs.js': 'module.exports = 1',
     },
   })
+  const requireHookTest = stealthyRequire(require.cache, () => require('@dword-design/require-hook-test'))
+  requireHookTest()
   await spawn(
     'babel',
     ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'],
     { env: { ...process.env, NODE_ENV: 'test' } },
   )
-  moduleAlias.addAliases(stealthyRequire(require.cache, () => require('@dword-design/test-aliases')))
   expect(require(resolve('dist'))).toEqual(1)
 })
 

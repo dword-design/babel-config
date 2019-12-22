@@ -4,8 +4,8 @@ import safeRequire from 'safe-require'
 
 const packageName = safeRequire(P.join(process.cwd(), 'package.json'))?.name
 const functionsPrefix = process.env.NODE_ENV === 'test' && packageName === '@dword-design/functions'
-  ? ''
-  : '/dist'
+  ? 'src'
+  : 'dist'
 
 export default {
   presets: [
@@ -18,7 +18,7 @@ export default {
     getPackageName(require.resolve('babel-plugin-add-module-exports')),
     [getPackageName(require.resolve('babel-plugin-transform-imports')), {
       [getPackageName(require.resolve('@dword-design/functions'))]: {
-        transform: `@dword-design/functions${functionsPrefix}/\${member}`,
+        transform: `@dword-design/functions/${functionsPrefix}/\${member}`,
       },
     }],
   ],
