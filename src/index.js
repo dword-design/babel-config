@@ -1,6 +1,7 @@
 import getPackageName from 'get-package-name'
 import P from 'path'
 import safeRequire from 'safe-require'
+import { paramCase } from 'param-case'
 
 const packageName = safeRequire(P.join(process.cwd(), 'package.json'))?.name
 const functionsPrefix = process.env.NODE_ENV === 'test' && packageName === '@dword-design/functions'
@@ -18,7 +19,7 @@ export default {
     getPackageName(require.resolve('babel-plugin-add-module-exports')),
     [getPackageName(require.resolve('babel-plugin-transform-imports')), {
       [getPackageName(require.resolve('@dword-design/functions'))]: {
-        transform: `@dword-design/functions/${functionsPrefix}/\${member}`,
+        transform: importName => `@dword-design/functions/${functionsPrefix}/${paramCase(importName)}`,
       },
     }],
   ],

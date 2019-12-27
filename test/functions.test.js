@@ -7,11 +7,11 @@ import { endent } from '@dword-design/functions'
 
 export const it = () => withLocalTmpDir(__dirname, async () => {
   await outputFile('src/index.js', endent`
-    import { map } from '@dword-design/functions'
-    export default [1, 2] |> map(x => x * 2)
+    import { endsWith } from '@dword-design/functions'
+    export default 'foobar' |> endsWith('bar')
   `)
   await spawn('babel', ['--out-dir', 'dist', '--config-file', require.resolve('@dword-design/babel-config'), 'src'])
-  expect(require(resolve('dist'))).toEqual([2, 4])
+  expect(require(resolve('dist'))).toBeTruthy()
 })
 
 export const timeout = 5000

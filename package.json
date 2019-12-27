@@ -25,6 +25,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-transform-imports": "^2.0.0",
     "get-package-name": "^1.0.0",
+    "param-case": "^3.0.3",
     "safe-require": "^1.0.3"
   },
   "devDependencies": {
