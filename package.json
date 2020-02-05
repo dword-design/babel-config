@@ -5,13 +5,14 @@
   "repository": "dword-design/babel-config",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "base build",
-    "start": "base start",
+    "depgraph": "base depgraph",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
     "test": "base test"
   },
   "dependencies": {
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@dword-design/base": "^4.0.0",
+    "@dword-design/base": "^5.0.0",
     "child-process-promise": "^2.2.1",
     "expect": "^24.9.0",
     "fs-extra": "^8.1.0",
