@@ -1,4 +1,3 @@
-import expect from 'expect'
 import withLocalTmpDir from 'with-local-tmp-dir'
 import { spawn } from 'child-process-promise'
 import { outputFile } from 'fs-extra'
