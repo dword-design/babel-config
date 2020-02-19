@@ -10,9 +10,11 @@
     "dist"
   ],
   "scripts": {
+    "commit": "base commit",
     "depgraph": "base depgraph",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
+    "release": "base release",
     "test": "base test"
   },
   "dependencies": {
@@ -29,8 +31,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@dword-design/base": "^5.0.0",
-    "child-process-promise": "^2.2.1",
+    "@dword-design/base": "^6.0.0",
+    "execa": "^4.0.0",
     "fs-extra": "^8.1.0",
     "with-local-tmp-dir": "^2.1.0"
   }
