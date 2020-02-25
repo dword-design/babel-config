@@ -1,3 +1,11 @@
+## [1.1.6](https://github.com/dword-design/babel-config/compare/v1.1.5...v1.1.6) (2020-02-25)
+
+
+### Bug Fixes
+
+* re-add babel-preset-jsx fork ([55c267f](https://github.com/dword-design/babel-config/commit/55c267f81f25ef47353c8c50428018184349f388))
+* upgrades ([321bc91](https://github.com/dword-design/babel-config/commit/321bc913f67c95ffcbbc0efb3916adda533f6589))
+
 ## [1.1.5](https://github.com/dword-design/babel-config/compare/v1.1.4...v1.1.5) (2020-02-24)
 
 
