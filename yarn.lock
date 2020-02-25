@@ -933,9 +933,9 @@
     sass-loader "^8.0.0"
 
 "@dword-design/base@^6.0.0":
-  version "6.0.14"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-6.0.14.tgz#01eeef6d6040a6a99f8325d80005c14491de6120"
-  integrity sha512-5m/4MwGFPFMx9+Y0ka/DTXTPf/7SAv1dv7l1VoBtjQUnTslSmlbFTR5/CuNvzZS0aeQnDjJIZ89Y59LUkVgdJA==
+  version "6.0.15"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-6.0.15.tgz#481cffc549f187d1e83941fccdf1b4b50011c887"
+  integrity sha512-uQ9E149ky7BLHkbUK4rPV9s2dIKhkv6UZD1QIbZTtJxV9fLq1xd81kbP8QpTealbZepXfFyOizOia9B84tguvw==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/register" "^7.6.2"
@@ -2170,6 +2170,17 @@
     "@vue/babel-sugar-v-model" "^1.1.2"
     "@vue/babel-sugar-v-on" "^1.1.2"
 
+"@vue/babel-preset-jsx@dword-design/jsx#fork/babel-preset-jsx":
+  version "1.1.2"
+  resolved "https://codeload.github.com/dword-design/jsx/tar.gz/2d986d9fe3881743b3efe9755f48bb3eade788b4"
+  dependencies:
+    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
+    "@vue/babel-plugin-transform-vue-jsx" "^1.1.2"
+    "@vue/babel-sugar-functional-vue" "^1.1.2"
+    "@vue/babel-sugar-inject-h" dword-design/jsx#fork/babel-sugar-inject-h
+    "@vue/babel-sugar-v-model" "^1.1.2"
+    "@vue/babel-sugar-v-on" "^1.1.2"
+
 "@vue/babel-sugar-functional-vue@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-functional-vue/-/babel-sugar-functional-vue-1.1.2.tgz#f7e24fba09e6f1ee70104560a8808057555f1a9a"
@@ -2181,6 +2192,12 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-inject-h/-/babel-sugar-inject-h-1.1.2.tgz#8a5276b6d8e2ed16ffc8078aad94236274e6edf0"
   integrity sha512-VRSENdTvD5htpnVp7i7DNuChR5rVMcORdXjvv5HVvpdKHzDZAYiLSD+GhnhxLm3/dMuk8pSzV+k28ECkiN5m8w==
+  dependencies:
+    "@babel/plugin-syntax-jsx" "^7.2.0"
+
+"@vue/babel-sugar-inject-h@dword-design/jsx#fork/babel-sugar-inject-h":
+  version "1.1.2"
+  resolved "https://codeload.github.com/dword-design/jsx/tar.gz/b98aba393b6502f1d98c3757a68124e7ea1faa49"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
@@ -9477,9 +9494,9 @@ mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
     minimist "0.0.8"
 
 mocha-ui-exports-auto-describe@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mocha-ui-exports-auto-describe/-/mocha-ui-exports-auto-describe-1.0.1.tgz#dec1d650340ebbfbf643acd01217fd93fc9b0c67"
-  integrity sha512-ErqlJKu6CFbUw7tNti6O/AfmfBLgdF0EDc/Mm1HzJLieLKGVcL9t/luMDmBNNJHt2JV1F/ezBgVmJ0unT5lM9A==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/mocha-ui-exports-auto-describe/-/mocha-ui-exports-auto-describe-1.0.2.tgz#fc357bb61703f6b4596c4ba208944a304b801694"
+  integrity sha512-cJCNaSbwlx1SOevM4Sp5QrFS6pqMLduF4ofhKwWonuymZVdZu4rwAs3sjfldc2gJ63Ktj6KfJCCbwF7VmX0UKA==
   dependencies:
     "@dword-design/functions" "^2.7.2"
     mocha "^7.0.1"
