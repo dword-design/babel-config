@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/dword-design/babel-config/compare/v1.1.6...v1.1.7) (2020-03-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v9 ([d2ae1fc](https://github.com/dword-design/babel-config/commit/d2ae1fcf8caab2c7ba5e9c2ae7da86d13b8551c2))
+
 ## [1.1.6](https://github.com/dword-design/babel-config/compare/v1.1.5...v1.1.6) (2020-02-25)
 
 
