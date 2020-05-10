@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/babel-config/compare/v1.1.7...v1.2.0) (2020-05-10)
+
+
+### Features
+
+* remove nullish coalescing operator ([1557b9a](https://github.com/dword-design/babel-config/commit/1557b9aaded1890d90adf4a0505d45a458ce65a1))
+
 ## [1.1.7](https://github.com/dword-design/babel-config/compare/v1.1.6...v1.1.7) (2020-03-19)
 
 
