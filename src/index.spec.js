@@ -23,18 +23,13 @@ export default {
     `,
     babelConfig,
   ),
-  'nullish coalescing': () => withLocalTmpDir(async () => {
+  'optional chaining': () => withLocalTmpDir(async () => {
     await outputFile('src/index.js', endent`
       const foo = undefined
       export default foo?.bar
     `)
     await execa('babel', ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'])
     expect(require(resolve('dist'))).toBeUndefined()
-  }),
-  'optional chaining': () => withLocalTmpDir(async () => {
-    await outputFile('src/index.js', 'export default undefined ?? \'foo\'')
-    await execa('babel', ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'])
-    expect(require(resolve('dist'))).toEqual('foo')
   }),
   'pipeline operator': () => withLocalTmpDir(async () => {
     await outputFile('src/index.js', 'export default 1 |> x => x * 2')

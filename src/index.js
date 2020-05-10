@@ -8,7 +8,6 @@ export default {
   ],
   plugins: [
     getPackageName(require.resolve('@babel/plugin-proposal-optional-chaining')),
-    getPackageName(require.resolve('@babel/plugin-proposal-nullish-coalescing-operator')),
     [getPackageName(require.resolve('@babel/plugin-proposal-pipeline-operator')), { proposal: 'fsharp' }],
     getPackageName(require.resolve('babel-plugin-add-module-exports')),
     [getPackageName(require.resolve('babel-plugin-transform-imports')), {
