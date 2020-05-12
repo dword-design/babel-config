@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dword-design/babel-config/compare/v1.2.0...v1.3.0) (2020-05-12)
+
+
+### Features
+
+* remove jsx ([953944e](https://github.com/dword-design/babel-config/commit/953944ef502da6fc6b6ccabdc1c683739fe614db))
+
 # [1.2.0](https://github.com/dword-design/babel-config/compare/v1.1.7...v1.2.0) (2020-05-10)
 
 
