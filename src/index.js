@@ -4,7 +4,6 @@ import { paramCase } from 'param-case'
 export default {
   presets: [
     [getPackageName(require.resolve('@babel/preset-env')), { targets: { node: 10 } }],
-    getPackageName(require.resolve('@vue/babel-preset-jsx')),
   ],
   plugins: [
     getPackageName(require.resolve('@babel/plugin-proposal-optional-chaining')),

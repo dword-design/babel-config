@@ -3,8 +3,6 @@ import execa from 'execa'
 import { outputFile } from 'fs-extra'
 import { resolve } from 'path'
 import { endent } from '@dword-design/functions'
-import * as babel from '@babel/core'
-import babelConfig from '.'
 
 export default {
   functions: () => withLocalTmpDir(async () => {
@@ -15,14 +13,6 @@ export default {
     await execa('babel', ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'])
     expect(require(resolve('dist'))).toBeTruthy()
   }),
-  jsx: () => babel.transformAsync(
-    endent`
-      export default {
-        render: () => <div>hello world</div>,
-      }
-    `,
-    babelConfig,
-  ),
   'optional chaining': () => withLocalTmpDir(async () => {
     await outputFile('src/index.js', endent`
       const foo = undefined
