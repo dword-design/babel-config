@@ -1,6 +1,6 @@
 import getPackageName from 'get-package-name'
 import { paramCase } from 'param-case'
-console.log(getPackageName(require.resolve('babel-plugin-module-resolver')))
+
 export default {
   presets: [
     [getPackageName(require.resolve('@babel/preset-env')), { targets: { node: 10 } }],
