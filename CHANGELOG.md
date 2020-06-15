@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/dword-design/babel-config/compare/v1.4.0...v1.4.1) (2020-06-15)
+
+
+### Bug Fixes
+
+* remove console.log ([868a962](https://github.com/dword-design/babel-config/commit/868a9626efeaa37118924a27fa747d638ad08349))
+
 # [1.4.0](https://github.com/dword-design/babel-config/compare/v1.3.0...v1.4.0) (2020-06-15)
 
 
