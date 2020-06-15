@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dword-design/babel-config/compare/v1.3.0...v1.4.0) (2020-06-15)
+
+
+### Features
+
+* add alias feature ([0da58d4](https://github.com/dword-design/babel-config/commit/0da58d495b4aaf0a4bcf1789e4b5ad6dbec0f8c2))
+
 # [1.3.0](https://github.com/dword-design/babel-config/compare/v1.2.0...v1.3.0) (2020-05-12)
 
 
