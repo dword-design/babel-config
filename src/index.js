@@ -1,6 +1,6 @@
 import getPackageName from 'get-package-name'
 import { paramCase } from 'param-case'
-
+console.log(getPackageName(require.resolve('babel-plugin-module-resolver')))
 export default {
   presets: [
     [getPackageName(require.resolve('@babel/preset-env')), { targets: { node: 10 } }],
@@ -9,9 +9,14 @@ export default {
     getPackageName(require.resolve('@babel/plugin-proposal-optional-chaining')),
     [getPackageName(require.resolve('@babel/plugin-proposal-pipeline-operator')), { proposal: 'fsharp' }],
     getPackageName(require.resolve('babel-plugin-add-module-exports')),
+    [getPackageName(require.resolve('babel-plugin-module-resolver')), {
+      'alias': {
+        '@': '.',
+      },
+    }],
     [getPackageName(require.resolve('babel-plugin-transform-imports')), {
       [getPackageName(require.resolve('@dword-design/functions'))]: {
-        transform: importName => `@dword-design/functions/dist/${paramCase(importName)}`,
+        transform: importName => `@dword-design/functions/dist/${importName |> paramCase}`,
       },
     }],
   ],
