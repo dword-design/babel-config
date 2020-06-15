@@ -13,6 +13,7 @@ export default {
       'alias': {
         '@': '.',
       },
+      cwd: 'packagejson',
     }],
     [getPackageName(require.resolve('babel-plugin-transform-imports')), {
       [getPackageName(require.resolve('@dword-design/functions'))]: {
