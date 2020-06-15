@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/dword-design/babel-config/compare/v1.4.1...v1.4.2) (2020-06-15)
+
+
+### Bug Fixes
+
+* use package.json for module resolver ([410b95d](https://github.com/dword-design/babel-config/commit/410b95d4fe79fb6f3dd64307c8249a5e1f1bc67b))
+
 ## [1.4.1](https://github.com/dword-design/babel-config/compare/v1.4.0...v1.4.1) (2020-06-15)
 
 
