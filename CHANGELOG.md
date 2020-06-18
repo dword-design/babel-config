@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/dword-design/babel-config/compare/v1.4.2...v1.5.0) (2020-06-18)
+
+
+### Features
+
+* add root feature ([d7088ad](https://github.com/dword-design/babel-config/commit/d7088adcf500aa249ab56a32d03ead7380f836fc))
+
 ## [1.4.2](https://github.com/dword-design/babel-config/compare/v1.4.1...v1.4.2) (2020-06-15)
 
 
