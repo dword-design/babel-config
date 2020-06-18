@@ -11,10 +11,10 @@
   ],
   "scripts": {
     "commit": "base commit",
-    "depgraph": "base depgraph",
+    "dev": "base dev",
+    "lint": "base lint",
     "prepare": "base prepare",
     "prepublishOnly": "base prepublishOnly",
-    "release": "base release",
     "test": "base test"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
+    "find-up": "^4.1.0",
     "get-package-name": "^1.0.0",
     "param-case": "^3.0.3"
   },
@@ -34,5 +35,8 @@
     "execa": "^4.0.0",
     "output-files": "^1.1.16",
     "with-local-tmp-dir": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
