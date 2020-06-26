@@ -91,11 +91,17 @@ export default {
   },
   'jsx: no props': {
     files: {
-      'src/index.js': 'export default () => <div>Hello world</div>',
+      'src/index.js': endent`
+        export default {
+          functional: true,
+          render: () => <div>Hello world</div>,
+        }
+
+      `,
     },
     test: async () =>
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
-        .toMatch(endent`
+        .toEqual(endent`
         "use strict";
         
         Object.defineProperty(exports, "__esModule", {
@@ -112,12 +118,17 @@ export default {
   },
   'jsx: props': {
     files: {
-      'src/index.js':
-        'export default context => <div>{ context.props.foo }</div>',
+      'src/index.js': endent`
+        export default {
+          functional: true,
+          render: context => <div>{ context.props.foo }</div>,
+        }
+
+      `,
     },
     test: async () =>
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
-        .toMatch(endent`
+        .toEqual(endent`
         "use strict";
         
         Object.defineProperty(exports, "__esModule", {
