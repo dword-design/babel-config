@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/dword-design/babel-config/compare/v1.6.1...v1.6.2) (2020-06-26)
+
+
+### Bug Fixes
+
+* dont use vue preset fork ([9225dd9](https://github.com/dword-design/babel-config/commit/9225dd943c5e7e6e0028128a932d1dc11be7ff6a))
+
 ## [1.6.1](https://github.com/dword-design/babel-config/compare/v1.6.0...v1.6.1) (2020-06-26)
 
 
