@@ -1493,17 +1493,6 @@
     "@vue/babel-sugar-v-model" "^1.1.2"
     "@vue/babel-sugar-v-on" "^1.1.2"
 
-"@vue/babel-preset-jsx@dword-design/jsx#fork/babel-preset-jsx":
-  version "1.1.2"
-  resolved "https://codeload.github.com/dword-design/jsx/tar.gz/2d986d9fe3881743b3efe9755f48bb3eade788b4"
-  dependencies:
-    "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
-    "@vue/babel-plugin-transform-vue-jsx" "^1.1.2"
-    "@vue/babel-sugar-functional-vue" "^1.1.2"
-    "@vue/babel-sugar-inject-h" dword-design/jsx#fork/babel-sugar-inject-h
-    "@vue/babel-sugar-v-model" "^1.1.2"
-    "@vue/babel-sugar-v-on" "^1.1.2"
-
 "@vue/babel-sugar-functional-vue@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-functional-vue/-/babel-sugar-functional-vue-1.1.2.tgz#f7e24fba09e6f1ee70104560a8808057555f1a9a"
@@ -1515,12 +1504,6 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@vue/babel-sugar-inject-h/-/babel-sugar-inject-h-1.1.2.tgz#8a5276b6d8e2ed16ffc8078aad94236274e6edf0"
   integrity sha512-VRSENdTvD5htpnVp7i7DNuChR5rVMcORdXjvv5HVvpdKHzDZAYiLSD+GhnhxLm3/dMuk8pSzV+k28ECkiN5m8w==
-  dependencies:
-    "@babel/plugin-syntax-jsx" "^7.2.0"
-
-"@vue/babel-sugar-inject-h@dword-design/jsx#fork/babel-sugar-inject-h":
-  version "1.1.2"
-  resolved "https://codeload.github.com/dword-design/jsx/tar.gz/ecc193a1fe7558d59b2b62d441b125d22fc03f60"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
