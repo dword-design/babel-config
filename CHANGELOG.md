@@ -1,3 +1,11 @@
+## [1.6.4](https://github.com/dword-design/babel-config/compare/v1.6.3...v1.6.4) (2020-06-26)
+
+
+### Bug Fixes
+
+* add new preset jsx branch ([10f725a](https://github.com/dword-design/babel-config/commit/10f725a6bda69ac28f66deae27756b318fd250e0))
+* fix dependencies ([d7dc999](https://github.com/dword-design/babel-config/commit/d7dc9997d082d09e0f858d1a5f26c0c2a501545f))
+
 ## [1.6.3](https://github.com/dword-design/babel-config/compare/v1.6.2...v1.6.3) (2020-06-26)
 
 
