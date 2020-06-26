@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dword-design/babel-config/compare/v1.5.0...v1.6.0) (2020-06-26)
+
+
+### Features
+
+* add jsx support ([cb79e7d](https://github.com/dword-design/babel-config/commit/cb79e7d58b1d27d0f86ac814e1a2f89300b9fb4f))
+
 # [1.5.0](https://github.com/dword-design/babel-config/compare/v1.4.2...v1.5.0) (2020-06-18)
 
 
