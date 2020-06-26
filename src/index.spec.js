@@ -89,7 +89,37 @@ export default {
     },
     test: () => expect(require(resolve('dist'))).toEqual(2),
   },
-  'jsx: no props': {
+  'jsx: normal': {
+    files: {
+      'src/index.js': endent`
+        export default {
+          render() {
+            return <div>Hello world</div>
+          },
+        }
+      `,
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toEqual(endent`
+        "use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.default = void 0;
+        var _default = {
+          render() {
+            const h = arguments[0];
+            return h("div", ["Hello world"]);
+          }
+        
+        };
+        exports.default = _default;
+        module.exports = exports.default;
+      `),
+  },
+  'jsx: functional: no props': {
     files: {
       'src/index.js': endent`
         export default {
@@ -115,7 +145,7 @@ export default {
         module.exports = exports.default;
       `),
   },
-  'jsx: context': {
+  'jsx: functional: context': {
     files: {
       'src/index.js': endent`
         export default {
