@@ -1,3 +1,11 @@
+## [1.6.5](https://github.com/dword-design/babel-config/compare/v1.6.4...v1.6.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* fix ([7110a03](https://github.com/dword-design/babel-config/commit/7110a031879ed4fe79d1241354fd4fa3eba5806d))
+* update lock file ([19ab1a1](https://github.com/dword-design/babel-config/commit/19ab1a135239268748250715e2273c123418cbad))
+
 ## [1.6.4](https://github.com/dword-design/babel-config/compare/v1.6.3...v1.6.4) (2020-06-26)
 
 
