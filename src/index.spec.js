@@ -1,22 +1,26 @@
 import { endent, mapValues } from '@dword-design/functions'
 import execa from 'execa'
+import { readFile } from 'fs-extra'
 import outputFiles from 'output-files'
 import { resolve } from 'path'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
-const runTest = config => () =>
-  withLocalTmpDir(async () => {
-    await outputFiles({
-      'package.json': JSON.stringify({}),
-      ...config.files,
+const runTest = config => {
+  config = { test: () => {}, ...config }
+  return () =>
+    withLocalTmpDir(async () => {
+      await outputFiles({
+        'package.json': JSON.stringify({}),
+        ...config.files,
+      })
+      await execa(
+        'babel',
+        ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'],
+        { cwd: config.cwd }
+      )
+      await config.test()
     })
-    await execa(
-      'babel',
-      ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'],
-      { cwd: config.cwd }
-    )
-    await config.test()
-  })
+}
 
 export default {
   'alias: valid': {
@@ -84,5 +88,48 @@ export default {
       'src/index.js': 'export default 1 |> x => x * 2',
     },
     test: () => expect(require(resolve('dist'))).toEqual(2),
+  },
+  'jsx: no props': {
+    files: {
+      'src/index.js': 'export default () => <div>Hello world</div>',
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toMatch(endent`
+        "use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.default = void 0;
+        var _default = {
+          functional: true,
+          render: h => h("div", ["Hello world"])
+        };
+        exports.default = _default;
+        module.exports = exports.default;
+      `),
+  },
+  'jsx: props': {
+    files: {
+      'src/index.js':
+        'export default context => <div>{ context.props.foo }</div>',
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toMatch(endent`
+        "use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.default = void 0;
+        var _default = {
+          functional: true,
+          render: (h, context) => h("div", [context.props.foo])
+        };
+        exports.default = _default;
+        module.exports = exports.default;
+      `),
   },
 } |> mapValues(runTest)

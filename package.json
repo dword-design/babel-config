@@ -22,6 +22,7 @@
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.6.3",
     "@dword-design/functions": "^2.2.2",
+    "@vue/babel-preset-jsx": "^1.1.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
@@ -33,6 +34,7 @@
     "@babel/core": "^7.8.3",
     "@dword-design/base": "^6.0.0",
     "execa": "^4.0.0",
+    "fs-extra": "^9.0.1",
     "output-files": "^1.1.16",
     "with-local-tmp-dir": "^2.1.0"
   },
