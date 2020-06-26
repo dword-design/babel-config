@@ -22,7 +22,7 @@
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.6.3",
     "@dword-design/functions": "^2.2.2",
-    "@vue/babel-preset-jsx": "dword-design/jsx#fork/babel-preset-jsx",
+    "@vue/babel-preset-jsx": "https://gitpkg.now.sh/dword-design/jsx/packages/babel-preset-jsx?a39a249be65fff323e668eaf811d424066c0c538",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
