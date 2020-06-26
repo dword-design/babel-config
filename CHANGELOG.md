@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/dword-design/babel-config/compare/v1.6.0...v1.6.1) (2020-06-26)
+
+
+### Bug Fixes
+
+* fix jsx ([71bcf9c](https://github.com/dword-design/babel-config/commit/71bcf9c66ba36f155c33d070b963db7d452682bd))
+
 # [1.6.0](https://github.com/dword-design/babel-config/compare/v1.5.0...v1.6.0) (2020-06-26)
 
 
