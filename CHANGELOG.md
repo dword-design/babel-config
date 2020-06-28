@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/dword-design/babel-config/compare/v1.6.6...v1.6.7) (2020-06-28)
+
+
+### Bug Fixes
+
+* fix alias root ([5d444a2](https://github.com/dword-design/babel-config/commit/5d444a2ba2c022acf23678d41cc2613e1479d3d0))
+
 ## [1.6.6](https://github.com/dword-design/babel-config/compare/v1.6.5...v1.6.6) (2020-06-28)
 
 
