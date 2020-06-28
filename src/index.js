@@ -29,8 +29,10 @@ export default {
           '@': '.',
         },
         resolvePath: (sourcePath, currentFile, options) => {
-          const rootPath = findUp.sync('.root', { cwd: P.dirname(currentFile) })
-          const rootDir = rootPath ? P.dirname(rootPath) : rootPath
+          const rootPath = findUp.sync(['package.json', '.root'], {
+            cwd: P.dirname(currentFile),
+          })
+          const rootDir = rootPath ? P.dirname(rootPath) : undefined
           return resolvePath(sourcePath, currentFile, {
             ...options,
             cwd:

@@ -50,6 +50,20 @@ export default {
     },
     test: () => expect(require(resolve('dist'))).toEqual(1),
   },
+  'alias: package.json': {
+    files: {
+      src: {
+        'foo.js': 'export default 1',
+        'package.json': JSON.stringify({}),
+        'index.js': endent`
+          import foo from '@/foo'
+          
+          export default foo
+        `,
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual(1),
+  },
   'alias: root behind cwd': {
     files: {
       '.root': '',
