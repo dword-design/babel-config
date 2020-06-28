@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/dword-design/babel-config/compare/v1.6.5...v1.6.6) (2020-06-28)
+
+
+### Bug Fixes
+
+* search for package json for aliases ([9ff8222](https://github.com/dword-design/babel-config/commit/9ff82223abf465e5c12b1e0f55753039e723fb8d))
+
 ## [1.6.5](https://github.com/dword-design/babel-config/compare/v1.6.4...v1.6.5) (2020-06-26)
 
 
