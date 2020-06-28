@@ -1,4 +1,3 @@
-import { startsWith } from '@dword-design/functions'
 import { resolvePath } from 'babel-plugin-module-resolver'
 import findUp from 'find-up'
 import getPackageName from 'get-package-name'
@@ -35,10 +34,7 @@ export default {
           const rootDir = rootPath ? P.dirname(rootPath) : undefined
           return resolvePath(sourcePath, currentFile, {
             ...options,
-            cwd:
-              rootDir && (rootDir |> startsWith(process.cwd()))
-                ? rootDir
-                : process.cwd(),
+            cwd: rootDir,
           })
         },
       },

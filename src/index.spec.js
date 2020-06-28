@@ -70,7 +70,7 @@ export default {
       'sub/src': {
         'foo.js': 'export default 1',
         'index.js': endent`
-          import foo from '@/src/foo'
+          import foo from '@/sub/src/foo'
           
           export default foo
         `,
