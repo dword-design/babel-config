@@ -1,3 +1,11 @@
+## [1.6.8](https://github.com/dword-design/babel-config/compare/v1.6.7...v1.6.8) (2020-08-23)
+
+
+### Bug Fixes
+
+* build files ([8771a16](https://github.com/dword-design/babel-config/commit/8771a164550cce593305e288718950d013caaffd))
+* **deps:** update dependency find-up to v5 ([78ca57f](https://github.com/dword-design/babel-config/commit/78ca57fde9b920829eb813d15eb41106028ee607))
+
 ## [1.6.7](https://github.com/dword-design/babel-config/compare/v1.6.6...v1.6.7) (2020-06-28)
 
 
