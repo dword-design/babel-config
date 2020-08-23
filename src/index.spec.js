@@ -23,6 +23,49 @@ const runTest = config => {
 }
 
 export default {
+  'alias: package.json': {
+    files: {
+      src: {
+        'foo.js': 'export default 1',
+        'index.js': endent`
+          import foo from '@/foo'
+          
+          export default foo
+        `,
+        'package.json': JSON.stringify({}),
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual(1),
+  },
+  'alias: root': {
+    files: {
+      src: {
+        '.root': '',
+        'foo.js': 'export default 1',
+        'index.js': endent`
+          import foo from '@/foo'
+          
+          export default foo
+        `,
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual(1),
+  },
+  'alias: root behind cwd': {
+    cwd: 'sub',
+    files: {
+      '.root': '',
+      'sub/src': {
+        'foo.js': 'export default 1',
+        'index.js': endent`
+          import foo from '@/sub/src/foo'
+          
+          export default foo
+        `,
+      },
+    },
+    test: () => expect(require(resolve('sub', 'dist'))).toEqual(1),
+  },
   'alias: valid': {
     files: {
       src: {
@@ -36,49 +79,6 @@ export default {
     },
     test: () => expect(require(resolve('dist', 'foo'))).toEqual(1),
   },
-  'alias: root': {
-    files: {
-      src: {
-        'foo.js': 'export default 1',
-        '.root': '',
-        'index.js': endent`
-          import foo from '@/foo'
-          
-          export default foo
-        `,
-      },
-    },
-    test: () => expect(require(resolve('dist'))).toEqual(1),
-  },
-  'alias: package.json': {
-    files: {
-      src: {
-        'foo.js': 'export default 1',
-        'package.json': JSON.stringify({}),
-        'index.js': endent`
-          import foo from '@/foo'
-          
-          export default foo
-        `,
-      },
-    },
-    test: () => expect(require(resolve('dist'))).toEqual(1),
-  },
-  'alias: root behind cwd': {
-    files: {
-      '.root': '',
-      'sub/src': {
-        'foo.js': 'export default 1',
-        'index.js': endent`
-          import foo from '@/sub/src/foo'
-          
-          export default foo
-        `,
-      },
-    },
-    cwd: 'sub',
-    test: () => expect(require(resolve('sub', 'dist'))).toEqual(1),
-  },
   functions: {
     files: {
       'src/index.js': endent`
@@ -87,77 +87,6 @@ export default {
       `,
     },
     test: () => expect(require(resolve('dist'))).toBeTruthy(),
-  },
-  'optional chaining': {
-    files: {
-      'src/index.js': endent`
-        const foo = undefined
-        export default foo?.bar
-      `,
-    },
-    test: () => expect(require(resolve('dist'))).toBeUndefined(),
-  },
-  'pipeline operator': {
-    files: {
-      'src/index.js': 'export default 1 |> x => x * 2',
-    },
-    test: () => expect(require(resolve('dist'))).toEqual(2),
-  },
-  'jsx: normal': {
-    files: {
-      'src/index.js': endent`
-        export default {
-          render() {
-            return <div>Hello world</div>
-          },
-        }
-      `,
-    },
-    test: async () =>
-      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
-        .toEqual(endent`
-        "use strict";
-        
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
-        var _default = {
-          render() {
-            const h = arguments[0];
-            return h("div", ["Hello world"]);
-          }
-        
-        };
-        exports.default = _default;
-        module.exports = exports.default;
-      `),
-  },
-  'jsx: functional: no props': {
-    files: {
-      'src/index.js': endent`
-        export default {
-          functional: true,
-          render: () => <div>Hello world</div>,
-        }
-      `,
-    },
-    test: async () =>
-      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
-        .toEqual(endent`
-        "use strict";
-        
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
-        var _default = {
-          functional: true,
-          render: h => h("div", ["Hello world"])
-        };
-        exports.default = _default;
-        module.exports = exports.default;
-      `),
   },
   'jsx: functional: context': {
     files: {
@@ -190,5 +119,76 @@ export default {
         exports.default = _default;
         module.exports = exports.default;
       `),
+  },
+  'jsx: functional: no props': {
+    files: {
+      'src/index.js': endent`
+        export default {
+          functional: true,
+          render: () => <div>Hello world</div>,
+        }
+      `,
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toEqual(endent`
+        "use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.default = void 0;
+        var _default = {
+          functional: true,
+          render: h => h("div", ["Hello world"])
+        };
+        exports.default = _default;
+        module.exports = exports.default;
+      `),
+  },
+  'jsx: normal': {
+    files: {
+      'src/index.js': endent`
+        export default {
+          render() {
+            return <div>Hello world</div>
+          },
+        }
+      `,
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toEqual(endent`
+        "use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.default = void 0;
+        var _default = {
+          render() {
+            const h = arguments[0];
+            return h("div", ["Hello world"]);
+          }
+        
+        };
+        exports.default = _default;
+        module.exports = exports.default;
+      `),
+  },
+  'optional chaining': {
+    files: {
+      'src/index.js': endent`
+        const foo = undefined
+        export default foo?.bar
+      `,
+    },
+    test: () => expect(require(resolve('dist'))).toBeUndefined(),
+  },
+  'pipeline operator': {
+    files: {
+      'src/index.js': 'export default 1 |> x => x * 2',
+    },
+    test: () => expect(require(resolve('dist'))).toEqual(2),
   },
 } |> mapValues(runTest)

@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "clean": "base clean",
     "commit": "base commit",
     "dev": "base dev",
     "lint": "base lint",
@@ -26,7 +27,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
-    "find-up": "^4.1.0",
+    "find-up": "^5.0.0",
     "get-package-name": "^1.0.0",
     "param-case": "^3.0.3"
   },
