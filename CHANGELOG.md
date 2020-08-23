@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/dword-design/babel-config/compare/v1.6.8...v1.6.9) (2020-08-23)
+
+
+### Bug Fixes
+
+* remove gitpkg ([5008062](https://github.com/dword-design/babel-config/commit/50080624153aa4a89f33793c826f3c4b34211cfc))
+
 ## [1.6.8](https://github.com/dword-design/babel-config/compare/v1.6.7...v1.6.8) (2020-08-23)
 
 
