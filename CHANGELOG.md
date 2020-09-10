@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/dword-design/babel-config/compare/v1.6.9...v1.7.0) (2020-09-10)
+
+
+### Features
+
+* add wildcard plugin ([57c4f3f](https://github.com/dword-design/babel-config/commit/57c4f3f0e8a555e44b356478839d97f34a8ae118))
+
 ## [1.6.9](https://github.com/dword-design/babel-config/compare/v1.6.8...v1.6.9) (2020-08-23)
 
 
