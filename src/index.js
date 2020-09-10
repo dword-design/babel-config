@@ -41,6 +41,7 @@ export default {
         },
       },
     ],
+    [getPackageName(require.resolve('babel-plugin-wildcard')), { exts: [] }],
   ],
   presets: [
     [

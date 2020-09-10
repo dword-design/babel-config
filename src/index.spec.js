@@ -29,7 +29,7 @@ export default {
         'foo.js': 'export default 1',
         'index.js': endent`
           import foo from '@/foo'
-          
+
           export default foo
         `,
         'package.json': JSON.stringify({}),
@@ -44,7 +44,7 @@ export default {
         'foo.js': 'export default 1',
         'index.js': endent`
           import foo from '@/foo'
-          
+
           export default foo
         `,
       },
@@ -59,7 +59,7 @@ export default {
         'foo.js': 'export default 1',
         'index.js': endent`
           import foo from '@/sub/src/foo'
-          
+
           export default foo
         `,
       },
@@ -72,7 +72,7 @@ export default {
         'bar/index.js': 'export default 1',
         'foo/index.js': endent`
           import bar from '@/src/bar'
-          
+
           export default bar
         `,
       },
@@ -87,6 +87,22 @@ export default {
       `,
     },
     test: () => expect(require(resolve('dist'))).toBeTruthy(),
+  },
+  'import: directory': {
+    files: {
+      src: {
+        foo: {
+          'bar.js': 'export default 1',
+          'baz.js': 'export default 2',
+        },
+        'index.js': endent`
+          import * as foo from './foo'
+
+          export default foo
+        `,
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual({ Bar: 1, Baz: 2 }),
   },
   'jsx: functional: context': {
     files: {
@@ -104,7 +120,7 @@ export default {
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
         "use strict";
-        
+
         Object.defineProperty(exports, "__esModule", {
           value: true
         });
@@ -133,7 +149,7 @@ export default {
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
         "use strict";
-        
+
         Object.defineProperty(exports, "__esModule", {
           value: true
         });
@@ -160,7 +176,7 @@ export default {
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
         "use strict";
-        
+
         Object.defineProperty(exports, "__esModule", {
           value: true
         });
@@ -170,7 +186,7 @@ export default {
             const h = arguments[0];
             return h("div", ["Hello world"]);
           }
-        
+
         };
         exports.default = _default;
         module.exports = exports.default;
