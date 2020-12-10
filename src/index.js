@@ -1,21 +1,19 @@
 import { resolvePath } from 'babel-plugin-module-resolver'
+import packageName from 'depcheck-package-name'
 import findUp from 'find-up'
-import getPackageName from 'get-package-name'
 import { paramCase } from 'param-case'
 import P from 'path'
 
 export default {
   plugins: [
-    getPackageName(require.resolve('@babel/plugin-proposal-optional-chaining')),
+    packageName`@babel/plugin-proposal-optional-chaining`,
     [
-      getPackageName(
-        require.resolve('@babel/plugin-proposal-pipeline-operator')
-      ),
+      packageName`@babel/plugin-proposal-pipeline-operator`,
       { proposal: 'fsharp' },
     ],
-    getPackageName(require.resolve('babel-plugin-add-module-exports')),
+    packageName`babel-plugin-add-module-exports`,
     [
-      getPackageName(require.resolve('babel-plugin-module-resolver')),
+      packageName`babel-plugin-module-resolver`,
       {
         alias: {
           '@': '.',
@@ -33,21 +31,18 @@ export default {
       },
     ],
     [
-      getPackageName(require.resolve('babel-plugin-transform-imports')),
+      packageName`babel-plugin-transform-imports`,
       {
-        [getPackageName(require.resolve('@dword-design/functions'))]: {
+        [packageName`@dword-design/functions`]: {
           transform: importName =>
             `@dword-design/functions/dist/${importName |> paramCase}`,
         },
       },
     ],
-    [getPackageName(require.resolve('babel-plugin-wildcard')), { exts: [] }],
+    [packageName`babel-plugin-wildcard`, { exts: [] }],
   ],
   presets: [
-    [
-      getPackageName(require.resolve('@babel/preset-env')),
-      { targets: { node: 10 } },
-    ],
-    getPackageName(require.resolve('@vue/babel-preset-jsx')),
+    [packageName`@babel/preset-env`, { targets: { node: 10 } }],
+    packageName`@vue/babel-preset-jsx`,
   ],
 }

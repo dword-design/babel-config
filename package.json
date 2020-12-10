@@ -28,8 +28,8 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "babel-plugin-wildcard": "dword-design/babel-plugin-wildcard#fork",
+    "depcheck-package-name": "^1.0.0",
     "find-up": "^5.0.0",
-    "get-package-name": "^2.0.0",
     "param-case": "^3.0.3"
   },
   "devDependencies": {
