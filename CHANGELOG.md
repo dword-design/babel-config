@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/dword-design/babel-config/compare/v1.7.0...v1.7.1) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([a1b2cfe](https://github.com/dword-design/babel-config/commit/a1b2cfeeee8661684996507abf6dec6df9b97cbe))
+
 # [1.7.0](https://github.com/dword-design/babel-config/compare/v1.6.9...v1.7.0) (2020-09-10)
 
 
