@@ -1,3 +1,11 @@
+## [1.7.3](https://github.com/dword-design/babel-config/compare/v1.7.2...v1.7.3) (2020-12-11)
+
+
+### Bug Fixes
+
+* replace get-package-name with depcheck-package-name ([c956079](https://github.com/dword-design/babel-config/commit/c956079f50d364e113722d78c5411c372d3d6ef1))
+* **deps:** update dependency get-package-name to v2 ([fe3f49b](https://github.com/dword-design/babel-config/commit/fe3f49b027827422c4b05f90cb4c2ebc3a8b1bcd))
+
 ## [1.7.2](https://github.com/dword-design/babel-config/compare/v1.7.1...v1.7.2) (2020-12-10)
 
 
