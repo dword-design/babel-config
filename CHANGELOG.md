@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/dword-design/babel-config/compare/v1.7.3...v1.7.4) (2020-12-13)
+
+
+### Bug Fixes
+
+* do not use wildcard plugin on directories with an index.js ([3243702](https://github.com/dword-design/babel-config/commit/324370232253ea4e5ed2f5edfd76bf6de053b2b7))
+
 ## [1.7.3](https://github.com/dword-design/babel-config/compare/v1.7.2...v1.7.3) (2020-12-11)
 
 
