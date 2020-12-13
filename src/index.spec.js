@@ -88,7 +88,7 @@ export default {
     },
     test: () => expect(require(resolve('dist'))).toBeTruthy(),
   },
-  'import: directory': {
+  'import: wildcard directory': {
     files: {
       src: {
         foo: {
@@ -103,6 +103,27 @@ export default {
       },
     },
     test: () => expect(require(resolve('dist'))).toEqual({ Bar: 1, Baz: 2 }),
+  },
+  'import: wildcard index.js': {
+    files: {
+      src: {
+        foo: {
+          'bar.js': 'export default 1',
+          'baz.js': 'export default 2',
+          'index.js': endent`
+            import Bar from './bar'
+
+            export { Bar }
+          `,
+        },
+        'index.js': endent`
+          import * as foo from './foo'
+
+          export default foo
+        `,
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual({ Bar: 1 }),
   },
   'jsx: functional: context': {
     files: {
