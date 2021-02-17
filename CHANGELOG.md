@@ -1,3 +1,10 @@
+## [1.7.5](https://github.com/dword-design/babel-config/compare/v1.7.4...v1.7.5) (2021-02-17)
+
+
+### Bug Fixes
+
+* upgrades ([b1c33c6](https://github.com/dword-design/babel-config/commit/b1c33c66dad0d9ba5681b1fb80f9466647599fbd))
+
 ## [1.7.4](https://github.com/dword-design/babel-config/compare/v1.7.3...v1.7.4) (2020-12-13)
 
 
