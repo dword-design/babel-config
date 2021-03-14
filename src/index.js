@@ -40,6 +40,7 @@ export default {
       },
     ],
     [packageName`babel-plugin-wildcard`, { exts: [] }],
+    packageName`babel-plugin-macros`,
   ],
   presets: [
     [packageName`@babel/preset-env`, { targets: { node: 10 } }],

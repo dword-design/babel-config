@@ -213,6 +213,25 @@ export default {
         module.exports = exports.default;
       `),
   },
+  macro: {
+    files: {
+      src: {
+        'foo.macro.js': endent`
+          import { createMacro } from 'babel-plugin-macros'
+
+          export default createMacro(context =>
+            context.references.default.[0].replaceWith(context.babel.types.numericLiteral(1))
+          )
+        `,
+        'index.js': endent`
+          import macro from './foo.macro'
+
+          export default macro
+        `,
+      },
+    },
+    test: () => expect(require(resolve('dist'))).toEqual(1),
+  },
   'optional chaining': {
     files: {
       'src/index.js': endent`
