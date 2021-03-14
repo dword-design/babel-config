@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/dword-design/babel-config/compare/v1.7.5...v1.8.0) (2021-03-14)
+
+
+### Features
+
+* add babel-plugin-macros ([#42](https://github.com/dword-design/babel-config/issues/42)) ([d03869d](https://github.com/dword-design/babel-config/commit/d03869d14d2a504387fc391d3db0fb900db75f24))
+
 ## [1.7.5](https://github.com/dword-design/babel-config/compare/v1.7.4...v1.7.5) (2021-02-17)
 
 
