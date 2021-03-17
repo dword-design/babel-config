@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/dword-design/babel-config/compare/v1.8.0...v1.8.1) (2021-03-17)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#43](https://github.com/dword-design/babel-config/issues/43)) ([ed04597](https://github.com/dword-design/babel-config/commit/ed0459702fff16c97649a0dabcda254c25125d08))
+
 # [1.8.0](https://github.com/dword-design/babel-config/compare/v1.7.5...v1.8.0) (2021-03-14)
 
 
