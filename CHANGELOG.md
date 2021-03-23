@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/dword-design/babel-config/compare/v1.8.2...v1.8.3) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#45](https://github.com/dword-design/babel-config/issues/45)) ([994f36e](https://github.com/dword-design/babel-config/commit/994f36e2b305f1b9b0474589af9a418ed2ab2a06))
+
 ## [1.8.2](https://github.com/dword-design/babel-config/compare/v1.8.1...v1.8.2) (2021-03-22)
 
 
