@@ -7,6 +7,7 @@ import withLocalTmpDir from 'with-local-tmp-dir'
 
 const runTest = config => {
   config = { test: () => {}, ...config }
+
   return () =>
     withLocalTmpDir(async () => {
       await outputFiles({
