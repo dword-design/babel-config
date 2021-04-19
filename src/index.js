@@ -36,7 +36,7 @@ export default {
       {
         [packageName`@dword-design/functions`]: {
           transform: importName =>
-            `@dword-design/functions/dist/${importName |> paramCase}`,
+            `@dword-design/functions/dist/${importName |> paramCase}.js`,
         },
       },
     ],
