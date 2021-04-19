@@ -80,6 +80,15 @@ export default {
     },
     test: () => expect(require(resolve('dist', 'foo'))).toEqual(1),
   },
+  esm: {
+    files: {
+      'src/index.js': 'export default 1',
+    },
+    test: async () =>
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8')).toEqual(
+        'export default 1;'
+      ),
+  },
   functions: {
     files: {
       'src/index.js': endent`
@@ -141,21 +150,13 @@ export default {
     test: async () =>
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
-        "use strict";
-
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
-        var _default = {
+        export default {
           functional: true,
           props: {
             foo: {}
           },
           render: (h, context) => h("div", [context.props.foo])
         };
-        exports.default = _default;
-        module.exports = exports.default;
       `),
   },
   'jsx: functional: no props': {
@@ -164,24 +165,16 @@ export default {
         export default {
           functional: true,
           render: () => <div>Hello world</div>,
-        }
+        };
       `,
     },
     test: async () =>
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
-        "use strict";
-
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
-        var _default = {
+        export default {
           functional: true,
           render: h => h("div", ["Hello world"])
         };
-        exports.default = _default;
-        module.exports = exports.default;
       `),
   },
   'jsx: normal': {
@@ -197,21 +190,13 @@ export default {
     test: async () =>
       expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
         .toEqual(endent`
-        "use strict";
-
-        Object.defineProperty(exports, "__esModule", {
-          value: true
-        });
-        exports.default = void 0;
-        var _default = {
+        export default {
           render() {
             const h = arguments[0];
             return h("div", ["Hello world"]);
           }
 
         };
-        exports.default = _default;
-        module.exports = exports.default;
       `),
   },
   macro: {
@@ -246,6 +231,14 @@ export default {
     files: {
       'src/index.js': 'export default 1 |> x => x * 2',
     },
-    test: () => expect(require(resolve('dist'))).toEqual(2),
+    test: async () => {
+      expect(await readFile(resolve('dist', 'index.js'), 'utf8'))
+        .toEqual(endent`
+        var _;
+        
+        export default (_ = 1, _ * 2);
+      `)
+      expect(require(resolve('dist'))).toEqual(2)
+    },
   },
 } |> mapValues(runTest)
