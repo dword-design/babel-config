@@ -11,7 +11,6 @@ export default {
       packageName`@babel/plugin-proposal-pipeline-operator`,
       { proposal: 'fsharp' },
     ],
-    packageName`babel-plugin-add-module-exports`,
     [
       packageName`babel-plugin-module-resolver`,
       {
@@ -37,7 +36,7 @@ export default {
       {
         [packageName`@dword-design/functions`]: {
           transform: importName =>
-            `@dword-design/functions/dist/${importName |> paramCase}`,
+            `@dword-design/functions/dist/${importName |> paramCase}.js`,
         },
       },
     ],
@@ -45,7 +44,7 @@ export default {
     packageName`babel-plugin-macros`,
   ],
   presets: [
-    [packageName`@babel/preset-env`, { targets: { node: 10 } }],
+    [packageName`@babel/preset-env`, { modules: false, targets: { node: 12 } }],
     packageName`@vue/babel-preset-jsx`,
   ],
 }
