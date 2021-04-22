@@ -1,3 +1,11 @@
+## [1.8.7](https://github.com/dword-design/babel-config/compare/v1.8.6...v1.8.7) (2021-04-22)
+
+
+### Bug Fixes
+
+* update config files ([f10ecd7](https://github.com/dword-design/babel-config/commit/f10ecd7deb6c3ce3ac6bfa36bafaa218bcf1063a))
+* updated package.json[description] ([#59](https://github.com/dword-design/babel-config/issues/59)) ([c57baa4](https://github.com/dword-design/babel-config/commit/c57baa43335890fd7fe585ec25a44095479ae377))
+
 ## [1.8.6](https://github.com/dword-design/babel-config/compare/v1.8.5...v1.8.6) (2021-04-21)
 
 
