@@ -1,3 +1,10 @@
+## [1.8.8](https://github.com/dword-design/babel-config/compare/v1.8.7...v1.8.8) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#57](https://github.com/dword-design/babel-config/issues/57)) ([1955948](https://github.com/dword-design/babel-config/commit/1955948746856b8c5b40871fdd4b4090fa03dad3))
+
 ## [1.8.7](https://github.com/dword-design/babel-config/compare/v1.8.6...v1.8.7) (2021-04-22)
 
 
