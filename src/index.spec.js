@@ -16,7 +16,15 @@ const runTest = config => {
       })
       await execa(
         'babel',
-        ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'],
+        [
+          '--extensions',
+          '.js,.ts',
+          '--out-dir',
+          'dist',
+          '--config-file',
+          require.resolve('.'),
+          'src',
+        ],
         { cwd: config.cwd }
       )
       await config.test()
@@ -247,5 +255,13 @@ export default {
       'src/index.js': 'export default 1 |> x => x * 2',
     },
     test: () => expect(require(resolve('dist'))).toEqual(2),
+  },
+  typescript: {
+    files: {
+      src: {
+        'index.ts': 'export default (x: number) => x * 2',
+      },
+    },
+    test: () => expect(require(resolve('dist'))(2)).toEqual(4),
   },
 } |> mapValues(runTest)

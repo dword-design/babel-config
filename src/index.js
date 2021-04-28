@@ -47,5 +47,6 @@ export default {
   presets: [
     [packageName`@babel/preset-env`, { targets: { node: 10 } }],
     packageName`@vue/babel-preset-jsx`,
+    packageName`@babel/preset-typescript`,
   ],
 }
