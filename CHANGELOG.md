@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/dword-design/babel-config/compare/v1.8.9...v1.9.0) (2021-04-28)
+
+
+### Features
+
+* typescript ([#62](https://github.com/dword-design/babel-config/issues/62)) ([8588369](https://github.com/dword-design/babel-config/commit/8588369b52ebf583de5b5ec01a0b108fb54cfa9f))
+
 ## [1.8.9](https://github.com/dword-design/babel-config/compare/v1.8.8...v1.8.9) (2021-04-28)
 
 
