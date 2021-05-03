@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/dword-design/babel-config/compare/v1.9.0...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#64](https://github.com/dword-design/babel-config/issues/64)) ([ad7c3fd](https://github.com/dword-design/babel-config/commit/ad7c3fd924bf8152d4eb29fc48a00bf5b5f520d0))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
 # [1.9.0](https://github.com/dword-design/babel-config/compare/v1.8.9...v1.9.0) (2021-04-28)
 
 
