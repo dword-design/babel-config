@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/dword-design/babel-config/compare/v2.0.1...v2.0.2) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#65](https://github.com/dword-design/babel-config/issues/65)) ([dd228bd](https://github.com/dword-design/babel-config/commit/dd228bd5ae8cdf5faadb254f9b4a9d368b04775d))
+* update dependency depcheck-package-name to v2 ([#66](https://github.com/dword-design/babel-config/issues/66)) ([b6bbdbc](https://github.com/dword-design/babel-config/commit/b6bbdbca728f3265db7d083c458aaa27b96fa3ff))
+* update dependency output-files to v2 ([#67](https://github.com/dword-design/babel-config/issues/67)) ([3081804](https://github.com/dword-design/babel-config/commit/3081804965134076bd6f398f08ee9448e60107d1))
+
 ## [2.0.1](https://github.com/dword-design/babel-config/compare/v2.0.0...v2.0.1) (2021-05-04)
 
 
