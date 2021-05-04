@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/dword-design/babel-config/compare/v2.0.0...v2.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v10 ([#68](https://github.com/dword-design/babel-config/issues/68)) ([944bf8a](https://github.com/dword-design/babel-config/commit/944bf8a005b1d29f969047327fe4a1ef2b60dc4a))
+* update dependency with-local-tmp-dir to v4 ([#69](https://github.com/dword-design/babel-config/issues/69)) ([f33e565](https://github.com/dword-design/babel-config/commit/f33e5652ffa2e392b9ed13e079228ce397a24b11))
+
 # [2.0.0](https://github.com/dword-design/babel-config/compare/v1.9.0...v2.0.0) (2021-05-03)
 
 
