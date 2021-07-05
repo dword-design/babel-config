@@ -2,7 +2,7 @@
   "name": "@dword-design/babel-config",
   "version": "2.0.4",
   "repository": "dword-design/babel-config",
-  "funding": "https://www.buymeacoffee.com/dword",
+  "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
   "main": "dist/index.js",
