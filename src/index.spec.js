@@ -229,7 +229,7 @@ export default {
           import { createMacro } from 'babel-plugin-macros'
 
           export default createMacro(context =>
-            context.references.default.[0].replaceWith(context.babel.types.numericLiteral(1))
+            context.references.default[0].replaceWith(context.babel.types.numericLiteral(1))
           )
         `,
         'index.js': endent`
