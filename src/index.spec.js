@@ -16,7 +16,15 @@ const runTest = config => {
       })
       await execa(
         'babel',
-        ['--out-dir', 'dist', '--config-file', require.resolve('.'), 'src'],
+        [
+          '--extensions',
+          '.js,.ts',
+          '--out-dir',
+          'dist',
+          '--config-file',
+          require.resolve('.'),
+          'src',
+        ],
         { cwd: config.cwd }
       )
       await config.test()
@@ -206,7 +214,7 @@ export default {
           import { createMacro } from 'babel-plugin-macros'
 
           export default createMacro(context =>
-            context.references.default.[0].replaceWith(context.babel.types.numericLiteral(1))
+            context.references.default[0].replaceWith(context.babel.types.numericLiteral(1))
           )
         `,
         'index.js': endent`

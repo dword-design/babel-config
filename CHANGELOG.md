@@ -1,3 +1,101 @@
+## [2.0.6](https://github.com/dword-design/babel-config/compare/v2.0.5...v2.0.6) (2021-07-20)
+
+
+### Bug Fixes
+
+* update config files ([52fb755](https://github.com/dword-design/babel-config/commit/52fb755b6f4d27e0725ffa7bfdba7de9f238b7c0))
+
+## [2.0.5](https://github.com/dword-design/babel-config/compare/v2.0.4...v2.0.5) (2021-07-06)
+
+
+### Bug Fixes
+
+* update config files ([a3130f3](https://github.com/dword-design/babel-config/commit/a3130f3fb434eb480e1de6a9e2c0098773d2942f))
+
+## [2.0.4](https://github.com/dword-design/babel-config/compare/v2.0.3...v2.0.4) (2021-06-14)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#73](https://github.com/dword-design/babel-config/issues/73)) ([24ba55b](https://github.com/dword-design/babel-config/commit/24ba55b7a9feb52d84db4a983f621bb75a8f1e1c))
+
+## [2.0.3](https://github.com/dword-design/babel-config/compare/v2.0.2...v2.0.3) (2021-05-28)
+
+
+### Bug Fixes
+
+* update config files ([89755de](https://github.com/dword-design/babel-config/commit/89755de6153cd7aaa6552e6da6d39239ba229534))
+
+## [2.0.2](https://github.com/dword-design/babel-config/compare/v2.0.1...v2.0.2) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#65](https://github.com/dword-design/babel-config/issues/65)) ([dd228bd](https://github.com/dword-design/babel-config/commit/dd228bd5ae8cdf5faadb254f9b4a9d368b04775d))
+* update dependency depcheck-package-name to v2 ([#66](https://github.com/dword-design/babel-config/issues/66)) ([b6bbdbc](https://github.com/dword-design/babel-config/commit/b6bbdbca728f3265db7d083c458aaa27b96fa3ff))
+* update dependency output-files to v2 ([#67](https://github.com/dword-design/babel-config/issues/67)) ([3081804](https://github.com/dword-design/babel-config/commit/3081804965134076bd6f398f08ee9448e60107d1))
+
+## [2.0.1](https://github.com/dword-design/babel-config/compare/v2.0.0...v2.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v10 ([#68](https://github.com/dword-design/babel-config/issues/68)) ([944bf8a](https://github.com/dword-design/babel-config/commit/944bf8a005b1d29f969047327fe4a1ef2b60dc4a))
+* update dependency with-local-tmp-dir to v4 ([#69](https://github.com/dword-design/babel-config/issues/69)) ([f33e565](https://github.com/dword-design/babel-config/commit/f33e5652ffa2e392b9ed13e079228ce397a24b11))
+
+# [2.0.0](https://github.com/dword-design/babel-config/compare/v1.9.0...v2.0.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#64](https://github.com/dword-design/babel-config/issues/64)) ([ad7c3fd](https://github.com/dword-design/babel-config/commit/ad7c3fd924bf8152d4eb29fc48a00bf5b5f520d0))
+
+
+### BREAKING CHANGES
+
+* require Node.js >= 12
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Sebastian Landwehr <info@dword-design.de>
+Co-authored-by: GitHub Actions <actions@github.com>
+
+# [1.9.0](https://github.com/dword-design/babel-config/compare/v1.8.9...v1.9.0) (2021-04-28)
+
+
+### Features
+
+* typescript ([#62](https://github.com/dword-design/babel-config/issues/62)) ([8588369](https://github.com/dword-design/babel-config/commit/8588369b52ebf583de5b5ec01a0b108fb54cfa9f))
+
+## [1.8.9](https://github.com/dword-design/babel-config/compare/v1.8.8...v1.8.9) (2021-04-28)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#60](https://github.com/dword-design/babel-config/issues/60)) ([65280e5](https://github.com/dword-design/babel-config/commit/65280e5265511d70f4b317bf7edbd7a6c839f293))
+
+## [1.8.8](https://github.com/dword-design/babel-config/compare/v1.8.7...v1.8.8) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#57](https://github.com/dword-design/babel-config/issues/57)) ([1955948](https://github.com/dword-design/babel-config/commit/1955948746856b8c5b40871fdd4b4090fa03dad3))
+
+## [1.8.7](https://github.com/dword-design/babel-config/compare/v1.8.6...v1.8.7) (2021-04-22)
+
+
+### Bug Fixes
+
+* update config files ([f10ecd7](https://github.com/dword-design/babel-config/commit/f10ecd7deb6c3ce3ac6bfa36bafaa218bcf1063a))
+* updated package.json[description] ([#59](https://github.com/dword-design/babel-config/issues/59)) ([c57baa4](https://github.com/dword-design/babel-config/commit/c57baa43335890fd7fe585ec25a44095479ae377))
+
+## [1.8.6](https://github.com/dword-design/babel-config/compare/v1.8.5...v1.8.6) (2021-04-21)
+
+
+### Bug Fixes
+
+* update config files ([abaeb16](https://github.com/dword-design/babel-config/commit/abaeb16e8ae7fae76f6a2723e2b699622d7a3d96))
+* updated package.json[description] ([#58](https://github.com/dword-design/babel-config/issues/58)) ([be19b55](https://github.com/dword-design/babel-config/commit/be19b55a89ff8e21231c5ebbfd3552b6639428b5))
+
 ## [1.8.5](https://github.com/dword-design/babel-config/compare/v1.8.4...v1.8.5) (2021-04-12)
 
 

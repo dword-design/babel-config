@@ -1,11 +1,10 @@
 {
   "name": "@dword-design/babel-config",
-  "version": "1.8.5",
-  "description": "",
+  "version": "2.0.6",
   "repository": "dword-design/babel-config",
-  "funding": "https://www.buymeacoffee.com/dword",
+  "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
-  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -23,23 +22,27 @@
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.6.3",
-    "@dword-design/functions": "^3.0.0",
+    "@babel/preset-typescript": "^7.13.0",
+    "@dword-design/functions": "^4.0.0",
     "@vue/babel-preset-jsx": "dword-design/jsx#fork-babel-preset-jsx",
     "babel-plugin-macros": "^3.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "babel-plugin-wildcard": "dword-design/babel-plugin-wildcard#fork",
-    "depcheck-package-name": "^1.0.0",
+    "depcheck-package-name": "^2.0.0",
     "find-up": "^5.0.0",
     "param-case": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@dword-design/base": "^7.0.0",
+    "@dword-design/base": "^8.0.0",
     "execa": "^5.0.0",
-    "fs-extra": "^9.0.1",
-    "output-files": "^1.1.16",
-    "with-local-tmp-dir": "^2.1.0"
+    "fs-extra": "^10.0.0",
+    "output-files": "^2.0.0",
+    "with-local-tmp-dir": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
