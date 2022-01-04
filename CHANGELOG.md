@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/dword-design/babel-config/compare/v2.0.6...v2.0.7) (2022-01-04)
+
+
+### Bug Fixes
+
+* update config files ([0a3e1d0](https://github.com/dword-design/babel-config/commit/0a3e1d0176fbcf672eebbce9e7c1cd7dfebfd3ac))
+
 ## [2.0.6](https://github.com/dword-design/babel-config/compare/v2.0.5...v2.0.6) (2021-07-20)
 
 
