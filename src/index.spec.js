@@ -216,7 +216,6 @@ export default {
             const h = arguments[0];
             return h("div", ["Hello world"]);
           }
-
         };
         exports.default = _default;
         module.exports = exports.default;
