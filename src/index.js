@@ -1,8 +1,11 @@
 import { resolvePath } from 'babel-plugin-module-resolver'
 import packageName from 'depcheck-package-name'
 import findUp from 'find-up'
+import loadPkg from 'load-pkg'
 import { paramCase } from 'param-case'
 import P from 'path'
+
+const packageConfig = loadPkg.sync() || {}
 
 export default {
   plugins: [
@@ -11,7 +14,9 @@ export default {
       packageName`@babel/plugin-proposal-pipeline-operator`,
       { proposal: 'fsharp' },
     ],
-    packageName`babel-plugin-add-module-exports`,
+    ...(packageConfig.type === 'module'
+      ? []
+      : [packageName`babel-plugin-add-module-exports`]),
     [
       packageName`babel-plugin-module-resolver`,
       {
@@ -37,7 +42,7 @@ export default {
       {
         [packageName`@dword-design/functions`]: {
           transform: importName =>
-            `@dword-design/functions/dist/${importName |> paramCase}`,
+            `@dword-design/functions/dist/${importName |> paramCase}.js`,
         },
       },
     ],
@@ -45,7 +50,12 @@ export default {
     packageName`babel-plugin-macros`,
   ],
   presets: [
-    [packageName`@babel/preset-env`, { targets: { node: 10 } }],
+    [
+      packageName`@babel/preset-env`,
+      packageConfig.type === 'module'
+        ? { modules: false, targets: { node: 14 } }
+        : { targets: { node: 10 } },
+    ],
     packageName`@vue/babel-preset-jsx`,
     packageName`@babel/preset-typescript`,
   ],
