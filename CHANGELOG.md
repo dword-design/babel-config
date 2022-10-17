@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/dword-design/babel-config/compare/v2.0.8...v2.1.0) (2022-10-17)
+
+
+### Features
+
+* esm support ([fb1a76e](https://github.com/dword-design/babel-config/commit/fb1a76ef72c8cec1e01c827e1f7da71ff42229aa))
+
 ## [2.0.8](https://github.com/dword-design/babel-config/compare/v2.0.7...v2.0.8) (2022-01-12)
 
 
