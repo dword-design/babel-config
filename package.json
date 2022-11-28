@@ -40,7 +40,7 @@
     "@dword-design/base": "^8.0.0",
     "@dword-design/tester": "^2.0.11",
     "@dword-design/tester-plugin-babel-config": "^1.0.0",
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^11.0.0"
   },
   "engines": {
     "node": ">=12"
