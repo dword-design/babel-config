@@ -2957,10 +2957,10 @@ babel-plugin-wildcard@dword-design/babel-plugin-wildcard#fork:
   dependencies:
     rimraf "^2.6.2"
 
-"babel-plugin-wildcard@npm:@dword-design/babel-plugin-wildcard":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-plugin-wildcard/-/babel-plugin-wildcard-0.0.1.tgz#37636b4894fc62839bfa16c9f6c69ba0c222eca7"
-  integrity sha512-JRWyw3Ddk6RHqaEee75IGG42p/oBYRcrPtBu5ExKV2rMktk5K25koUGyiyvXemcvzTZ3I1/dOn+89W/DpKGSAg==
+"babel-plugin-wildcard@npm:@dword-design/babel-plugin-wildcard@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-plugin-wildcard/-/babel-plugin-wildcard-0.0.2.tgz#5434601315a3c7912d40435f76d1d333e220c958"
+  integrity sha512-jC+voQeWQ1TNH6H2Qb5F+EKnPy9fA23pxkmd6ISkYBSf/9udu+oXE9nBp1oAc0GVZUvX1CrFDQlWoW4xaACXsQ==
   dependencies:
     rimraf "^2.6.2"
 

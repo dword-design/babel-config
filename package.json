@@ -29,7 +29,7 @@
     "babel-plugin-macros": "^3.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
-    "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
+    "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard@0.0.2",
     "depcheck-package-name": "^2.0.0",
     "find-up": "^5.0.0",
     "load-pkg": "^4.0.0",
