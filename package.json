@@ -29,7 +29,7 @@
     "babel-plugin-macros": "^3.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
-    "babel-plugin-wildcard": "dword-design/babel-plugin-wildcard#fork",
+    "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
     "depcheck-package-name": "^2.0.0",
     "find-up": "^5.0.0",
     "load-pkg": "^4.0.0",
@@ -37,13 +37,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
-    "@dword-design/base": "^8.0.0",
+    "@dword-design/base": "^9.1.6",
+    "@dword-design/chdir": "^2.1.1",
     "@dword-design/tester": "^2.0.11",
-    "@dword-design/tester-plugin-babel-config": "^1.0.0",
-    "fs-extra": "^10.0.0"
+    "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
+    "fs-extra": "^11.1.0",
+    "jiti": "^1.16.0",
+    "output-files": "^2.0.10"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "publishConfig": {
     "access": "public"
