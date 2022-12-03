@@ -119,9 +119,9 @@ export default tester(
           |> property('code')
       ).toEqual(endent`
         const foo = {};
-        import _wcImport2 from "./foo/baz.js";
+        import _wcImport2 from "./foo${P.sep}baz.js";
         foo["Baz"] = _wcImport2;
-        import _wcImport from "./foo/bar.js";
+        import _wcImport from "./foo${P.sep}bar.js";
         foo["Bar"] = _wcImport;
       `)
     },
