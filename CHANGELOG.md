@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/dword-design/babel-config/compare/v2.1.1...v2.1.2) (2023-01-15)
+
+
+### Bug Fixes
+
+* fix load-pkg ([#123](https://github.com/dword-design/babel-config/issues/123)) ([18a73e0](https://github.com/dword-design/babel-config/commit/18a73e0648c71cf3832dd5c17522fd214545d855))
+
 ## [2.1.1](https://github.com/dword-design/babel-config/compare/v2.1.0...v2.1.1) (2022-12-03)
 
 
