@@ -32,7 +32,7 @@
     "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
     "depcheck-package-name": "^2.0.0",
     "find-up": "^5.0.0",
-    "load-pkg": "^4.0.0",
+    "load-pkg": "npm:@dword-design/load-pkg",
     "param-case": "^3.0.3"
   },
   "devDependencies": {

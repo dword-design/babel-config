@@ -3,7 +3,7 @@ import chdir from '@dword-design/chdir'
 import { endent, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import { outputFile } from 'fs-extra'
+import { ensureDir, outputFile } from 'fs-extra'
 import jiti from 'jiti'
 import outputFiles from 'output-files'
 import P from 'path'
@@ -265,6 +265,19 @@ export default tester(
         var _;
         export default (_ = 1, _ * 2);
       `),
+    'subdir and esm': async () => {
+      await ensureDir('sub')
+      await chdir('sub', async () => {
+        expect(
+          transformAsync('export default 1', {
+            filename: 'index.js',
+            ...self(),
+          })
+            |> await
+            |> property('code')
+        ).toEqual('export default 1;')
+      })
+    },
     typescript: async () =>
       expect(
         transformAsync('export default (x: number) => x * 2', {
