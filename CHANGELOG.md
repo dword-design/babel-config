@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/dword-design/babel-config/compare/v2.1.2...v2.1.3) (2023-03-15)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/chdir to v2.1.4 ([8d1948f](https://github.com/dword-design/babel-config/commit/8d1948f6446622b156044fc193ae9192dadcc80a))
+
 ## [2.1.2](https://github.com/dword-design/babel-config/compare/v2.1.1...v2.1.2) (2023-01-15)
 
 
