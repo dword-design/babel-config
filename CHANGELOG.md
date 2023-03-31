@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/dword-design/babel-config/compare/v2.1.6...v2.1.7) (2023-03-31)
+
+
+### Bug Fixes
+
+* update dependency @babel/preset-typescript to v7.21.4 ([44ffd8c](https://github.com/dword-design/babel-config/commit/44ffd8c09ddf5fd1bd9682238e4c5e4f163d5fa8))
+
 ## [2.1.6](https://github.com/dword-design/babel-config/compare/v2.1.5...v2.1.6) (2023-03-31)
 
 
