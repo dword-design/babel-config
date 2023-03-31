@@ -1,3 +1,11 @@
+## [2.1.4](https://github.com/dword-design/babel-config/compare/v2.1.3...v2.1.4) (2023-03-31)
+
+
+### Bug Fixes
+
+* update dependency @babel/core to v7.21.4 ([315e357](https://github.com/dword-design/babel-config/commit/315e35777f540e285280dc30a20e832efdc5810f))
+* update dependency fs-extra to v11.1.1 ([0130ee1](https://github.com/dword-design/babel-config/commit/0130ee1b105be51d9717e789b4a009318c46629f))
+
 ## [2.1.3](https://github.com/dword-design/babel-config/compare/v2.1.2...v2.1.3) (2023-03-15)
 
 
