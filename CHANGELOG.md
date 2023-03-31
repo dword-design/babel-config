@@ -1,3 +1,10 @@
+## [2.1.5](https://github.com/dword-design/babel-config/compare/v2.1.4...v2.1.5) (2023-03-31)
+
+
+### Bug Fixes
+
+* update dependency @babel/plugin-proposal-optional-chaining to v7.21.0 ([18d200a](https://github.com/dword-design/babel-config/commit/18d200a56faa2ec70c627421d35215b1f9690c44))
+
 ## [2.1.4](https://github.com/dword-design/babel-config/compare/v2.1.3...v2.1.4) (2023-03-31)
 
 
