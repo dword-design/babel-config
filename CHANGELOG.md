@@ -1,3 +1,10 @@
+## [2.1.8](https://github.com/dword-design/babel-config/compare/v2.1.7...v2.1.8) (2023-03-31)
+
+
+### Bug Fixes
+
+* update dependency jiti to v1.18.2 ([1dc23a6](https://github.com/dword-design/babel-config/commit/1dc23a63aa5fa6be6c6b374dbfb268c62d2a8eb6))
+
 ## [2.1.7](https://github.com/dword-design/babel-config/compare/v2.1.6...v2.1.7) (2023-03-31)
 
 
