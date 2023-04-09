@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/dword-design/babel-config/compare/v2.2.1...v2.2.2) (2023-04-09)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v9.5.7 ([dcc4430](https://github.com/dword-design/babel-config/commit/dcc4430f245649cbd4958b2ead018465d6baf8e7))
+
 ## [2.2.1](https://github.com/dword-design/babel-config/compare/v2.2.0...v2.2.1) (2023-04-09)
 
 
