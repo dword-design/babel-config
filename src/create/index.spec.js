@@ -127,6 +127,17 @@ export default tester(
       ).toEqual(
         'import endsWith from "@dword-design/functions/dist/ends-with.js";',
       ),
+    'import assertion': async () => {
+      await fs.outputFile('foo.json', JSON.stringify({}))
+      expect(
+        transformAsync("import './foo.json' assert { type: 'json' }", {
+          filename: 'index.js',
+          ...self(),
+        })
+          |> await
+          |> property('code'),
+      ).toEqual('import "./foo.json" assert { type: \'json\' };')
+    },
     'import: wildcard directory': async () => {
       await outputFiles({
         foo: {

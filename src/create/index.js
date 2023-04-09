@@ -1,5 +1,6 @@
 import optionalChainingPlugin from '@babel/plugin-proposal-optional-chaining'
 import pipelineOperatorPlugin from '@babel/plugin-proposal-pipeline-operator'
+import importAssertionsPlugin from '@babel/plugin-syntax-import-assertions'
 import envPreset from '@babel/preset-env'
 import typescriptPreset from '@babel/preset-typescript'
 import jsxPreset from '@vue/babel-preset-jsx'
@@ -53,6 +54,7 @@ export default () => {
       ],
       [wildcardPlugin, { exts: [] }],
       macrosPlugin,
+      importAssertionsPlugin,
     ],
     presets: [
       [
