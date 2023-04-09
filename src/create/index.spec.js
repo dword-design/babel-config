@@ -3,6 +3,8 @@ import chdir from '@dword-design/chdir'
 import { endent, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
+import packageName from 'depcheck-package-name'
+import { ESLint } from 'eslint'
 import { execaCommand } from 'execa'
 import fs from 'fs-extra'
 import jiti from 'jiti'
@@ -100,6 +102,19 @@ export default tester(
         exports.default = _default;
         module.exports = exports.default;
       `)
+    },
+    'eslint parser': async () => {
+      const eslint = new ESLint({
+        overrideConfig: {
+          parser: packageName`@babel/eslint-parser`,
+          parserOptions: {
+            babelOptions: {
+              configFile: '..',
+            },
+          },
+        },
+      })
+      expect((eslint.lintText('') |> await)[0].messages).toEqual([])
     },
     functions: async () =>
       expect(
@@ -301,6 +316,7 @@ export default tester(
   [
     testerPluginTmpDir(),
     {
+      before: () => execaCommand('base prepublishOnly'),
       beforeEach: () =>
         fs.outputFile('package.json', JSON.stringify({ type: 'module' })),
     },
