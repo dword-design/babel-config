@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/dword-design/babel-config/compare/v2.1.11...v2.2.0) (2023-04-09)
+
+
+### Features
+
+* import assertions ([163eb5c](https://github.com/dword-design/babel-config/commit/163eb5c040c276da438e75a9769af6b1f08b9614))
+
 ## [2.1.11](https://github.com/dword-design/babel-config/compare/v2.1.10...v2.1.11) (2023-04-09)
 
 
