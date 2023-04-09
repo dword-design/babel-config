@@ -3,19 +3,20 @@ import chdir from '@dword-design/chdir'
 import { endent, property } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import { ensureDir, outputFile } from 'fs-extra'
+import { execaCommand } from 'execa'
+import fs from 'fs-extra'
 import jiti from 'jiti'
 import outputFiles from 'output-files'
 import P from 'path'
 
-import self from '.'
+import self from './index.js'
 
 export default tester(
   {
     'alias: package.json': async () => {
-      await outputFile(
+      await fs.outputFile(
         P.join('src', 'package.json'),
-        JSON.stringify({ type: 'module' })
+        JSON.stringify({ type: 'module' }),
       )
       expect(
         transformAsync("import '@/foo'", {
@@ -23,18 +24,18 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual('import "./foo";')
     },
     'alias: root': async () => {
-      await outputFile('.root', '')
+      await fs.outputFile('.root', '')
       expect(
         transformAsync("import '@/foo'", {
           filename: 'index.js',
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual('import "./foo";')
     },
     'alias: root behind cwd': async () => {
@@ -49,8 +50,8 @@ export default tester(
             ...self(),
           })
             |> await
-            |> property('code')
-        ).toEqual('import "../a/foo";')
+            |> property('code'),
+        ).toEqual('import "../a/foo";'),
       )
     },
     'alias: valid': async () =>
@@ -60,24 +61,32 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual('import "../src/bar";'),
+    cli: async () => {
+      await fs.outputFile('index.js', 'export default 1')
+      await fs.outputFile(
+        '.babelrc.json',
+        JSON.stringify({ extends: '../src/index.js' }),
+      )
+      await execaCommand('babel index.js')
+    },
     commonjs: async () => {
-      await outputFile('package.json', JSON.stringify({}))
+      await fs.outputFile('package.json', JSON.stringify({}))
       expect(
         transformAsync(
           endent`
-        import foo from '@/src/foo'
+            import foo from '@/src/foo'
 
-        export default foo
-      `,
+            export default foo
+          `,
           {
             filename: 'index.js',
             ...self(),
-          }
+          },
         )
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
         "use strict";
 
@@ -99,9 +108,9 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(
-        'import endsWith from "@dword-design/functions/dist/ends-with.js";'
+        'import endsWith from "@dword-design/functions/dist/ends-with.js";',
       ),
     'import: wildcard directory': async () => {
       await outputFiles({
@@ -116,7 +125,7 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
         const foo = {};
         import _wcImport2 from "./foo/baz.js";
@@ -131,10 +140,10 @@ export default tester(
           'bar.js': 'export default 1',
           'baz.js': 'export default 2',
           'index.js': endent`
-        import Bar from './bar'
+            import Bar from './bar'
 
-        export { Bar }
-      `,
+            export { Bar }
+          `,
         },
       })
       expect(
@@ -143,81 +152,82 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual('import * as foo from "./foo";')
     },
     jiti: async () => {
-      await outputFile('index.js', "export default 'foo'")
+      await fs.outputFile('index.js', "export default 'foo'")
       expect(
         jiti(process.cwd(), {
           interopDefault: true,
           transformOptions: {
             babel: self(),
           },
-        })('./index.js')
+        })('./index.js'),
       ).toEqual('foo')
     },
     'jsx: functional: context': async () =>
       expect(
         transformAsync(
           endent`
-      export default {
-        functional: true,
-        props: {
-          foo: {},
-        },
-        render: context => <div>{ context.props.foo }</div>,
-      }
-    `,
-          { filename: 'index.js', ...self() }
+            export default {
+              functional: true,
+              props: {
+                foo: {},
+              },
+              render: context => <div>{ context.props.foo }</div>,
+            }
+          `,
+          { filename: 'index.js', ...self() },
         )
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
-      export default {
-        functional: true,
-        props: {
-          foo: {}
-        },
-        render: (h, context) => h("div", [context.props.foo])
-      };
-    `),
+        export default {
+          functional: true,
+          props: {
+            foo: {}
+          },
+          render: (h, context) => h("div", [context.props.foo])
+        };
+      `),
     'jsx: functional: no props': async () =>
       expect(
         transformAsync(
           endent`
-    export default {
-      functional: true,
-      props: {
-        foo: {},
-      },
-      render: context => <div>Hello world</div>,
-    }
-  `,
-          { filename: 'index.js', ...self() }
+            export default {
+              functional: true,
+              props: {
+                foo: {},
+              },
+              render: context => <div>Hello world</div>,
+            }
+          `,
+          { filename: 'index.js', ...self() },
         )
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
-    export default {
-      functional: true,
-      props: {
-        foo: {}
-      },
-      render: (h, context) => h("div", ["Hello world"])
-    };
-  `),
+        export default {
+          functional: true,
+          props: {
+            foo: {}
+          },
+          render: (h, context) => h("div", ["Hello world"])
+        };
+      `),
     macro: async () => {
-      await outputFiles({
-        'foo.macro.js': endent`
-        import { createMacro } from 'babel-plugin-macros'
+      await fs.outputFile('package.json', JSON.stringify({}))
+      await fs.outputFile(
+        'foo.macro.js',
+        endent`
+          const { createMacro } = require('babel-plugin-macros')
 
-        export default createMacro(context =>
-          context.references.default[0].replaceWith(context.babel.types.numericLiteral(1))
-        )
-      `,
-        'package.json': JSON.stringify({}),
-      })
+          module.exports = createMacro(context =>
+            context.references.default[0].replaceWith(context.babel.types.numericLiteral(1))
+          )
+        `,
+      )
       expect(
         transformAsync(
           endent`
@@ -225,10 +235,10 @@ export default tester(
 
             export default macro
           `,
-          { filename: 'index.js', ...self() }
+          { filename: 'index.js', ...self() },
         )
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
         "use strict";
 
@@ -248,7 +258,7 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
         var _foo;
         export default (_foo = foo) === null || _foo === void 0 ? void 0 : _foo.bar;
@@ -260,13 +270,13 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual(endent`
         var _;
         export default (_ = 1, _ * 2);
       `),
     'subdir and esm': async () => {
-      await ensureDir('sub')
+      await fs.ensureDir('sub')
       await chdir('sub', async () => {
         expect(
           transformAsync('export default 1', {
@@ -274,7 +284,7 @@ export default tester(
             ...self(),
           })
             |> await
-            |> property('code')
+            |> property('code'),
         ).toEqual('export default 1;')
       })
     },
@@ -285,14 +295,14 @@ export default tester(
           ...self(),
         })
           |> await
-          |> property('code')
+          |> property('code'),
       ).toEqual('export default (x => x * 2);'),
   },
   [
     testerPluginTmpDir(),
     {
       beforeEach: () =>
-        outputFile('package.json', JSON.stringify({ type: 'module' })),
+        fs.outputFile('package.json', JSON.stringify({ type: 'module' })),
     },
-  ]
+  ],
 )
