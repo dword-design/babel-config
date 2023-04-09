@@ -33,15 +33,15 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-imports": "^2.0.0",
     "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
-    "depcheck-package-name": "^2.0.0",
-    "find-up": "^5.0.0",
+    "depcheck-package-name": "^3.0.0",
+    "find-up": "^6.3.0",
     "load-pkg": "npm:@dword-design/load-pkg",
     "param-case": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@dword-design/base": "^9.1.6",
-    "@dword-design/chdir": "^2.1.1",
+    "@dword-design/chdir": "^3.0.0",
     "@dword-design/tester": "^2.0.11",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.6",
     "execa": "^7.1.1",
