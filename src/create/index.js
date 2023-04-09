@@ -9,7 +9,7 @@ import moduleResolverPlugin, { resolvePath } from 'babel-plugin-module-resolver'
 import transformImportsPlugin from 'babel-plugin-transform-imports'
 import wildcardPlugin from 'babel-plugin-wildcard'
 import packageName from 'depcheck-package-name'
-import findUp from 'find-up'
+import { findUpSync } from 'find-up'
 import loadPkg from 'load-pkg'
 import { paramCase } from 'param-case'
 import P from 'path'
@@ -29,7 +29,7 @@ export default () => {
             '@': '.',
           },
           resolvePath: (sourcePath, currentFile, options) => {
-            const rootPath = findUp.sync(['package.json', '.root'], {
+            const rootPath = findUpSync(['package.json', '.root'], {
               cwd: P.dirname(currentFile),
             })
 
