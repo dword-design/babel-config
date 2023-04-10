@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/dword-design/babel-config/compare/v2.2.3...v2.2.4) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester-plugin-tmp-dir to v2.1.20 ([3a0311a](https://github.com/dword-design/babel-config/commit/3a0311a79a321d23b57e4867166b8911211029ae))
+
 ## [2.2.3](https://github.com/dword-design/babel-config/compare/v2.2.2...v2.2.3) (2023-04-09)
 
 
