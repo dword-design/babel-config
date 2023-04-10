@@ -1,3 +1,10 @@
+## [2.2.6](https://github.com/dword-design/babel-config/compare/v2.2.5...v2.2.6) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester to v2.0.17 ([6ca429f](https://github.com/dword-design/babel-config/commit/6ca429f859c9fe77f39c9e7ac1dddd6ba4347f35))
+
 ## [2.2.5](https://github.com/dword-design/babel-config/compare/v2.2.4...v2.2.5) (2023-04-10)
 
 
