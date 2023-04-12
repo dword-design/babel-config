@@ -1,3 +1,12 @@
+## [2.2.12](https://github.com/dword-design/babel-config/compare/v2.2.11...v2.2.12) (2023-04-12)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v9.5.17 ([30dfaf7](https://github.com/dword-design/babel-config/commit/30dfaf74f1d82bf53aa6780b2d991ec187c1f2aa))
+* update dependency @dword-design/tester-plugin-tmp-dir to v2.1.26 ([667f7c8](https://github.com/dword-design/babel-config/commit/667f7c80d57e0f1eab8c005ae3e77618a364267f))
+* update dependency output-files to v2.0.27 ([8b64262](https://github.com/dword-design/babel-config/commit/8b642626f31d8e1df31f6702bdc0b3b49ef3e693))
+
 ## [2.2.11](https://github.com/dword-design/babel-config/compare/v2.2.10...v2.2.11) (2023-04-11)
 
 
