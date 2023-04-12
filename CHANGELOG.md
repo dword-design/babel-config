@@ -1,3 +1,10 @@
+## [2.2.13](https://github.com/dword-design/babel-config/compare/v2.2.12...v2.2.13) (2023-04-12)
+
+
+### Bug Fixes
+
+* simplify config ([a73b6d4](https://github.com/dword-design/babel-config/commit/a73b6d44983965a7dcb97b67679a1ca82f0032b0))
+
 ## [2.2.12](https://github.com/dword-design/babel-config/compare/v2.2.11...v2.2.12) (2023-04-12)
 
 
