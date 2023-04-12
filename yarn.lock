@@ -1191,9 +1191,9 @@
     "@jridgewell/trace-mapping" "0.3.9"
 
 "@dword-design/babel-config@^2.0.0", "@dword-design/babel-config@^2.1.1":
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-2.2.11.tgz#05e49aabb1f05cbc9e0f337ca422ee05bee9aa95"
-  integrity sha512-9DB74jGulrPn/wViBqh9hLOVdjrTmcVmB9rwqY6TfB6JrKrVW8Aq9S+vPrU36WdPIua6zZq8lHwUYQmm9RbTOg==
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-2.2.12.tgz#950ae1718dfbe764b7274eb7079407d94581ff7a"
+  integrity sha512-fK4c+6gTepQM/uRdS3ljcnEa1N8jsZIi766DqxyOSC57j3jAPFSZYjhbzq/+TrjUi5C6BbIBn4fyogQibFzObQ==
   dependencies:
     "@babel/plugin-proposal-optional-chaining" "^7.6.0"
     "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
@@ -1201,7 +1201,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4"
@@ -1231,9 +1231,9 @@
     micromatch "^4.0.2"
 
 "@dword-design/base@^9.1.6":
-  version "9.5.17"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-9.5.17.tgz#b8d759b9333e56a7a27d8d0c41fe332acd6ac8c6"
-  integrity sha512-gNSFQID0/G2uhJRld2UhQEENNSYt/zZJb7vMIBBUT1Ob1okkFZeGG+W5mbKoeui0MKRbQCWJRMdoh9w9VvTC+g==
+  version "9.5.18"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-9.5.18.tgz#e6125515a2cebef08b93bf7b3f7755b21db3b613"
+  integrity sha512-aR6R4hNCqqDR3dWDDxUyS1YOtg0vsr5CAK6/0uQ+Q5QeYcFnSxL9nj4fIkt8SiTqpkmW7G0ehGL2Y08VyGD8DA==
   dependencies:
     "@commitlint/cli" "^17.4.0"
     "@commitlint/config-conventional" "^17.4.0"
@@ -1319,9 +1319,9 @@
     babel-plugin-add-module-exports "^1.0.2"
 
 "@dword-design/depcheck-parser-sass@^3.0.0":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-3.0.9.tgz#cb317657a92c72f7df1f1a919fcc67f50ba6724d"
-  integrity sha512-2urIKMsoXEJE/jW9GDCjyh6LrgxTklug1r0gwnFtatdiEXNu1qsgsqFyuXG7TarcrY0hpRx+9EW1kcpaYSgBYg==
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-3.0.10.tgz#ddedf8cdd1bf048a4059c48f90c2853c0a39a3e9"
+  integrity sha512-vNmo6sB6ea4QmgPnI6NNsumsRP6ZDgvgLd0UN0zxJlbudo0ar0ouGzr7tVskrYsCWcH5IvrlmErBOfQu2GKPQg==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     get-package-name "^2.0.0"
@@ -1339,9 +1339,9 @@
     objectorarray "^1.0.3"
 
 "@dword-design/eslint-config@^3.0.6":
-  version "3.0.27"
-  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-3.0.27.tgz#ba73239d69cdd204d18e950c964b8c6882abdbdf"
-  integrity sha512-DrzQw19l1IGbzypfFKQYdr4Oxi63Y2gP8hvfq9+cBaNGPc1FLySr5MHSd6JHJcmVXAmftTVga7tJc8DyQ1K+NQ==
+  version "3.0.30"
+  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-3.0.30.tgz#95dfa31884d492ea663d500f57c04c5c169d58da"
+  integrity sha512-XkXGnUT+77Sr4M7ddTinoPq/tMvYafXKYjYh9RLSEDrFl61R5uxZJ7IUX3ZLGZ6zTk4EVv50Gy8CoN7uJy9luw==
   dependencies:
     "@babel/eslint-parser" "^7.13.14"
     "@dword-design/babel-config" "^2.0.0"
@@ -1409,9 +1409,9 @@
   integrity sha512-W861E4cbZmUaYri3mhZNfpo2Yxc1hHPP0v5iDZGE+h9EHplY+8tzWaTNHIF67DmrcDLP79zxd/lkJX0xZs0l8Q==
 
 "@dword-design/suppress-babel-register-esm-warning@^1.1.0":
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/@dword-design/suppress-babel-register-esm-warning/-/suppress-babel-register-esm-warning-1.1.7.tgz#934a2aa91f5b1fd1a6e94a04cf2a8f758a45624a"
-  integrity sha512-kfw2ruEISr3JGtOKfRcprkQLjsG7ili8dOsg7dxQN/TXJV7aQmZkzpEo3j18X3IXKLoqkTOAsUJzRAwh4Y+BtA==
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@dword-design/suppress-babel-register-esm-warning/-/suppress-babel-register-esm-warning-1.1.8.tgz#99ba4fde9426db7d47d7c5c57a7b25ee3db8ffd9"
+  integrity sha512-avkHnlQMU+d1QgCHeuGbAm8ZFFrcBCs2OQWXQAxOsRxMbvh977cYCoWSTsQtF5k8aP7tKWCBQSBw1bU6fqi7/g==
 
 "@dword-design/tester-plugin-tmp-dir@^2.1.6":
   version "2.1.26"
@@ -2336,7 +2336,6 @@
 
 "@vue/babel-preset-jsx@dword-design/jsx#fork-babel-preset-jsx", "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -2355,7 +2354,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -3242,9 +3240,9 @@ camelcase@^6.0.0, camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001477"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001477.tgz#a2ffb2276258233034bbb869d4558b02658a511e"
-  integrity sha512-lZim4iUHhGcy5p+Ri/G7m84hJwncj+Kz7S5aD4hoQfslKZJgt0tHc/hafVbqHC5bbhHb+mrW2JOUHkI5KH7toQ==
+  version "1.0.30001478"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001478.tgz#0ef8a1cf8b16be47a0f9fc4ecfc952232724b32a"
+  integrity sha512-gMhDyXGItTHipJj2ApIvR+iVB5hd0KP3svMWWXDvZOmjzJJassGLMfxRkQCSYgGd2gtdL/ReeiyvMSFD1Ss6Mw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -3990,9 +3988,9 @@ depcheck-package-name@^3.0.0:
     tagged-template-noop "^2.1.1"
 
 depcheck-parser-babel@^3.0.1:
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/depcheck-parser-babel/-/depcheck-parser-babel-3.0.16.tgz#9a2da266c6814c877cee50fd14b8aaae03b1851d"
-  integrity sha512-M1bS7NXJhSHMoayVZhLOTknZZ8kR4B0QzfuYO1rK5ryNz1yYyvfYg+XoAyxkIfhKcmKh10TlBUo8UR88TSpDtA==
+  version "3.0.17"
+  resolved "https://registry.yarnpkg.com/depcheck-parser-babel/-/depcheck-parser-babel-3.0.17.tgz#2f1d03b0e0542059f68dbaa2602ebfd146bbc422"
+  integrity sha512-9UTWtntTjrVpyi6p+VLhMu7ghdSYh8vL0FzBOuEpsMG/jP5iMVfFiQL+mSE9iPLzx1RMHCYcc8/dVX1u7mUR5A==
   dependencies:
     "@babel/core" "^7.7.7"
     fs-extra "^10.0.0"
@@ -8538,76 +8536,76 @@ npm@^7.0.0:
   resolved "https://registry.yarnpkg.com/npm/-/npm-7.24.2.tgz#861117af8241bea592289f22407230e5300e59ca"
   integrity sha512-120p116CE8VMMZ+hk8IAb1inCPk4Dj3VZw29/n2g6UI77urJKVYb7FZUDW8hY+EBnfsjI/2yrobBgFyzo7YpVQ==
   dependencies:
-    "@isaacs/string-locale-compare" "*"
-    "@npmcli/arborist" "*"
-    "@npmcli/ci-detect" "*"
-    "@npmcli/config" "*"
-    "@npmcli/map-workspaces" "*"
-    "@npmcli/package-json" "*"
-    "@npmcli/run-script" "*"
-    abbrev "*"
-    ansicolors "*"
-    ansistyles "*"
-    archy "*"
-    cacache "*"
-    chalk "*"
-    chownr "*"
-    cli-columns "*"
-    cli-table3 "*"
-    columnify "*"
-    fastest-levenshtein "*"
-    glob "*"
-    graceful-fs "*"
-    hosted-git-info "*"
-    ini "*"
-    init-package-json "*"
-    is-cidr "*"
-    json-parse-even-better-errors "*"
-    libnpmaccess "*"
-    libnpmdiff "*"
-    libnpmexec "*"
-    libnpmfund "*"
-    libnpmhook "*"
-    libnpmorg "*"
-    libnpmpack "*"
-    libnpmpublish "*"
-    libnpmsearch "*"
-    libnpmteam "*"
-    libnpmversion "*"
-    make-fetch-happen "*"
-    minipass "*"
-    minipass-pipeline "*"
-    mkdirp "*"
-    mkdirp-infer-owner "*"
-    ms "*"
-    node-gyp "*"
-    nopt "*"
-    npm-audit-report "*"
-    npm-install-checks "*"
-    npm-package-arg "*"
-    npm-pick-manifest "*"
-    npm-profile "*"
-    npm-registry-fetch "*"
-    npm-user-validate "*"
-    npmlog "*"
-    opener "*"
-    pacote "*"
-    parse-conflict-json "*"
-    qrcode-terminal "*"
-    read "*"
-    read-package-json "*"
-    read-package-json-fast "*"
-    readdir-scoped-modules "*"
-    rimraf "*"
-    semver "*"
-    ssri "*"
-    tar "*"
-    text-table "*"
-    tiny-relative-date "*"
-    treeverse "*"
-    validate-npm-package-name "*"
-    which "*"
-    write-file-atomic "*"
+    "@isaacs/string-locale-compare" "^1.1.0"
+    "@npmcli/arborist" "^2.9.0"
+    "@npmcli/ci-detect" "^1.2.0"
+    "@npmcli/config" "^2.3.0"
+    "@npmcli/map-workspaces" "^1.0.4"
+    "@npmcli/package-json" "^1.0.1"
+    "@npmcli/run-script" "^1.8.6"
+    abbrev "~1.1.1"
+    ansicolors "~0.3.2"
+    ansistyles "~0.1.3"
+    archy "~1.0.0"
+    cacache "^15.3.0"
+    chalk "^4.1.2"
+    chownr "^2.0.0"
+    cli-columns "^3.1.2"
+    cli-table3 "^0.6.0"
+    columnify "~1.5.4"
+    fastest-levenshtein "^1.0.12"
+    glob "^7.2.0"
+    graceful-fs "^4.2.8"
+    hosted-git-info "^4.0.2"
+    ini "^2.0.0"
+    init-package-json "^2.0.5"
+    is-cidr "^4.0.2"
+    json-parse-even-better-errors "^2.3.1"
+    libnpmaccess "^4.0.2"
+    libnpmdiff "^2.0.4"
+    libnpmexec "^2.0.1"
+    libnpmfund "^1.1.0"
+    libnpmhook "^6.0.2"
+    libnpmorg "^2.0.2"
+    libnpmpack "^2.0.1"
+    libnpmpublish "^4.0.1"
+    libnpmsearch "^3.1.1"
+    libnpmteam "^2.0.3"
+    libnpmversion "^1.2.1"
+    make-fetch-happen "^9.1.0"
+    minipass "^3.1.3"
+    minipass-pipeline "^1.2.4"
+    mkdirp "^1.0.4"
+    mkdirp-infer-owner "^2.0.0"
+    ms "^2.1.2"
+    node-gyp "^7.1.2"
+    nopt "^5.0.0"
+    npm-audit-report "^2.1.5"
+    npm-install-checks "^4.0.0"
+    npm-package-arg "^8.1.5"
+    npm-pick-manifest "^6.1.1"
+    npm-profile "^5.0.3"
+    npm-registry-fetch "^11.0.0"
+    npm-user-validate "^1.0.1"
+    npmlog "^5.0.1"
+    opener "^1.5.2"
+    pacote "^11.3.5"
+    parse-conflict-json "^1.1.1"
+    qrcode-terminal "^0.12.0"
+    read "~1.0.7"
+    read-package-json "^4.1.1"
+    read-package-json-fast "^2.0.3"
+    readdir-scoped-modules "^1.1.0"
+    rimraf "^3.0.2"
+    semver "^7.3.5"
+    ssri "^8.0.1"
+    tar "^6.1.11"
+    text-table "~0.2.0"
+    tiny-relative-date "^1.3.0"
+    treeverse "^1.0.4"
+    validate-npm-package-name "~3.0.0"
+    which "^2.0.2"
+    write-file-atomic "^3.0.3"
 
 npmlog@*, npmlog@^7.0.1:
   version "7.0.1"
@@ -10630,9 +10628,9 @@ supports-preserve-symlinks-flag@^1.0.0:
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
 suppress-experimental-warnings@^1.1.0:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/suppress-experimental-warnings/-/suppress-experimental-warnings-1.1.14.tgz#bcde17b5f2c1e078f8d7709cdbb0b144bd48f6e1"
-  integrity sha512-DyeBsXxmKZRIjoa6GUFGXOqszwm+smcei35FkyAd3g29/Qs8m/nItzXpkyKeNtH0XoO7GFew0qSqh8ZdmVyS1A==
+  version "1.1.16"
+  resolved "https://registry.yarnpkg.com/suppress-experimental-warnings/-/suppress-experimental-warnings-1.1.16.tgz#ee68dc3451ea40d56b976daceebdc1f36b0f3b4a"
+  integrity sha512-xHL/jwYtJLX8h23w5Uz8mdpvjiFCdOuQCfokvfw1CYtdEaouvACTkA36IC7ftffpN7hYidiy6fWIv+JWGopijw==
 
 svg-element-attributes@^1.3.1:
   version "1.3.1"

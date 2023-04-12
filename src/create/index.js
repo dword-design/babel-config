@@ -1,14 +1,4 @@
-import optionalChainingPlugin from '@babel/plugin-proposal-optional-chaining'
-import pipelineOperatorPlugin from '@babel/plugin-proposal-pipeline-operator'
-import importAssertionsPlugin from '@babel/plugin-syntax-import-assertions'
-import envPreset from '@babel/preset-env'
-import typescriptPreset from '@babel/preset-typescript'
-import jsxPreset from '@vue/babel-preset-jsx'
-import addModuleExportsPlugin from 'babel-plugin-add-module-exports'
-import macrosPlugin from 'babel-plugin-macros'
-import moduleResolverPlugin, { resolvePath } from 'babel-plugin-module-resolver'
-import transformImportsPlugin from 'babel-plugin-transform-imports'
-import wildcardPlugin from 'babel-plugin-wildcard'
+import { resolvePath } from 'babel-plugin-module-resolver'
 import packageName from 'depcheck-package-name'
 import { findUpSync } from 'find-up'
 import loadPkg from 'load-pkg'
@@ -20,11 +10,16 @@ export default () => {
 
   return {
     plugins: [
-      optionalChainingPlugin,
-      [pipelineOperatorPlugin, { proposal: 'fsharp' }],
-      ...(packageConfig.type === 'module' ? [] : [addModuleExportsPlugin]),
+      packageName`@babel/plugin-proposal-optional-chaining`,
       [
-        moduleResolverPlugin,
+        packageName`@babel/plugin-proposal-pipeline-operator`,
+        { proposal: 'fsharp' },
+      ],
+      ...(packageConfig.type === 'module'
+        ? []
+        : [packageName`babel-plugin-add-module-exports`]),
+      [
+        'babel-plugin-module-resolver',
         {
           alias: {
             '@': '.',
@@ -44,7 +39,7 @@ export default () => {
         },
       ],
       [
-        transformImportsPlugin,
+        packageName`babel-plugin-transform-imports`,
         {
           [packageName`@dword-design/functions`]: {
             transform: importName =>
@@ -52,19 +47,19 @@ export default () => {
           },
         },
       ],
-      [wildcardPlugin, { exts: [] }],
-      macrosPlugin,
-      importAssertionsPlugin,
+      [packageName`babel-plugin-wildcard`, { exts: [] }],
+      packageName`babel-plugin-macros`,
+      packageName`@babel/plugin-syntax-import-assertions`,
     ],
     presets: [
       [
-        envPreset,
+        packageName`@babel/preset-env`,
         packageConfig.type === 'module'
           ? { modules: false, targets: { node: 14 } }
           : { targets: { node: 10 } },
       ],
-      jsxPreset,
-      typescriptPreset,
+      packageName`@vue/babel-preset-jsx`,
+      packageName`@babel/preset-typescript`,
     ],
   }
 }

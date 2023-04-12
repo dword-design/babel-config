@@ -7,7 +7,6 @@ import packageName from 'depcheck-package-name'
 import { ESLint } from 'eslint'
 import { execaCommand } from 'execa'
 import fs from 'fs-extra'
-import jiti from 'jiti'
 import outputFiles from 'output-files'
 import P from 'path'
 
@@ -180,17 +179,6 @@ export default tester(
           |> await
           |> property('code'),
       ).toEqual('import * as foo from "./foo";')
-    },
-    jiti: async () => {
-      await fs.outputFile('index.js', "export default 'foo'")
-      expect(
-        jiti(process.cwd(), {
-          interopDefault: true,
-          transformOptions: {
-            babel: self(),
-          },
-        })('./index.js'),
-      ).toEqual('foo')
     },
     'jsx: functional: context': async () =>
       expect(
