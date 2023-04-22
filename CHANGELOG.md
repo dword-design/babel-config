@@ -1,3 +1,10 @@
+## [2.2.14](https://github.com/dword-design/babel-config/compare/v2.2.13...v2.2.14) (2023-04-22)
+
+
+### Bug Fixes
+
+* update dependency eslint to v8.39.0 ([a38dd2d](https://github.com/dword-design/babel-config/commit/a38dd2d284ad303bcbfcc35a74f16f33096eab20))
+
 ## [2.2.13](https://github.com/dword-design/babel-config/compare/v2.2.12...v2.2.13) (2023-04-12)
 
 
