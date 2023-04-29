@@ -1,3 +1,11 @@
+## [2.2.15](https://github.com/dword-design/babel-config/compare/v2.2.14...v2.2.15) (2023-04-29)
+
+
+### Bug Fixes
+
+* update dependency @babel/core to v7.21.5 ([8d0ee59](https://github.com/dword-design/babel-config/commit/8d0ee59a29bbb5fe172fd8ade3da927870e989ff))
+* update dependency @babel/preset-env to v7.21.5 ([64b6c58](https://github.com/dword-design/babel-config/commit/64b6c58dde99f14abe58fab194b0099b60606bd6))
+
 ## [2.2.14](https://github.com/dword-design/babel-config/compare/v2.2.13...v2.2.14) (2023-04-22)
 
 
