@@ -1,3 +1,11 @@
+## [2.2.16](https://github.com/dword-design/babel-config/compare/v2.2.15...v2.2.16) (2023-04-30)
+
+
+### Bug Fixes
+
+* fix compatible node version ([#154](https://github.com/dword-design/babel-config/issues/154)) ([44fe927](https://github.com/dword-design/babel-config/commit/44fe927284dd6698bf892977c8719842d0573365))
+* update dependency @babel/preset-typescript to v7.21.5 ([a84ab69](https://github.com/dword-design/babel-config/commit/a84ab69077b5c6af7ca83a7596ded28c7c6e1de8))
+
 ## [2.2.15](https://github.com/dword-design/babel-config/compare/v2.2.14...v2.2.15) (2023-04-29)
 
 
