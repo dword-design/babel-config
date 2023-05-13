@@ -35,6 +35,7 @@
     "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
     "depcheck-package-name": "^3.0.0",
     "find-up": "^6.3.0",
+    "jiti": "^1.18.2",
     "load-pkg": "npm:@dword-design/load-pkg",
     "param-case": "^3.0.3"
   },
