@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/babel-config/compare/v2.2.19...v3.0.0) (2023-05-30)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v10 ([#159](https://github.com/dword-design/babel-config/issues/159)) ([84f5e8f](https://github.com/dword-design/babel-config/commit/84f5e8feebbd1a995ae946f68e67ca7f4b69f9ab))
+
+
+### BREAKING CHANGES
+
+* drop node 14
+
 ## [2.2.19](https://github.com/dword-design/babel-config/compare/v2.2.18...v2.2.19) (2023-05-13)
 
 
