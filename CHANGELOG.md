@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dword-design/babel-config/compare/v3.0.0...v3.0.1) (2023-07-01)
+
+
+### Bug Fixes
+
+* cleanup ([a7ed23b](https://github.com/dword-design/babel-config/commit/a7ed23bd75d25fe024dc1f8f1d4131b8769f4ba5))
+
 # [3.0.0](https://github.com/dword-design/babel-config/compare/v2.2.19...v3.0.0) (2023-05-30)
 
 
