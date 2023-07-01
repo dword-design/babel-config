@@ -180,56 +180,6 @@ export default tester(
           |> property('code'),
       ).toEqual('import * as foo from "./foo";')
     },
-    'jsx: functional: context': async () =>
-      expect(
-        transformAsync(
-          endent`
-            export default {
-              functional: true,
-              props: {
-                foo: {},
-              },
-              render: context => <div>{ context.props.foo }</div>,
-            }
-          `,
-          { filename: 'index.js', ...self() },
-        )
-          |> await
-          |> property('code'),
-      ).toEqual(endent`
-        export default {
-          functional: true,
-          props: {
-            foo: {}
-          },
-          render: (h, context) => h("div", [context.props.foo])
-        };
-      `),
-    'jsx: functional: no props': async () =>
-      expect(
-        transformAsync(
-          endent`
-            export default {
-              functional: true,
-              props: {
-                foo: {},
-              },
-              render: context => <div>Hello world</div>,
-            }
-          `,
-          { filename: 'index.js', ...self() },
-        )
-          |> await
-          |> property('code'),
-      ).toEqual(endent`
-        export default {
-          functional: true,
-          props: {
-            foo: {}
-          },
-          render: (h, context) => h("div", ["Hello world"])
-        };
-      `),
     macro: async () => {
       await fs.outputFile('package.json', JSON.stringify({}))
       await fs.outputFile(
@@ -302,15 +252,6 @@ export default tester(
         ).toEqual('export default 1;')
       })
     },
-    typescript: async () =>
-      expect(
-        transformAsync('export default (x: number) => x * 2', {
-          filename: 'index.ts',
-          ...self(),
-        })
-          |> await
-          |> property('code'),
-      ).toEqual('export default (x => x * 2);'),
   },
   [
     testerPluginTmpDir(),

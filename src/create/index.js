@@ -10,7 +10,6 @@ export default () => {
 
   return {
     plugins: [
-      packageName`@babel/plugin-proposal-optional-chaining`,
       [
         packageName`@babel/plugin-proposal-pipeline-operator`,
         { proposal: 'fsharp' },
@@ -59,8 +58,6 @@ export default () => {
           targets: { node: 14 },
         },
       ],
-      packageName`@vue/babel-preset-jsx`,
-      packageName`@babel/preset-typescript`,
     ],
   }
 }
