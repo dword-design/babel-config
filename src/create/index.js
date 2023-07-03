@@ -55,7 +55,7 @@ export default () => {
         packageName`@babel/preset-env`,
         {
           ...(packageConfig.type === 'module' ? { modules: false } : {}),
-          targets: { node: 14 },
+          targets: { node: 16 },
         },
       ],
     ],

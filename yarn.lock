@@ -1250,7 +1250,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4"
@@ -1461,6 +1461,16 @@
   version "5.0.22"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.22.tgz#15d49d65e750fd24a6de3aab7981ae28c68c49a3"
   integrity sha512-kpptJzbNrOhDIR2ey0zRTQ+BoVuKNlSQZcmfjlOZ9fPDoy1vJCGKNRJHlOjeSYmU3KScGa/i0LGyu8fB8N07Eg==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^5.0.0"
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
+"@dword-design/functions@^5.0.23":
+  version "5.0.23"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.23.tgz#a1969df14e17b4a82bbee0f61a86f9fd9ecae698"
+  integrity sha512-XX5ytRLUxxpEHeAozYeU2Gw02B4uQDB7n2Grn0vvYEhOQZyew3v6afcD+77v3fiBq31U3IQkvQy52PM7jBjA5Q==
   dependencies:
     "@dword-design/endent" "^1.0.0"
     delay "^5.0.0"
@@ -2422,7 +2432,6 @@
 
 "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -2441,7 +2450,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
