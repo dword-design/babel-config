@@ -34,7 +34,7 @@
     "find-up": "^6.3.0",
     "jiti": "^1.18.2",
     "load-pkg": "npm:@dword-design/load-pkg",
-    "param-case": "^3.0.3"
+    "param-case": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
