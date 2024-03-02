@@ -97,8 +97,7 @@ export default tester(
         exports.default = void 0;
         var _foo = _interopRequireDefault(require("./src/foo"));
         function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-        var _default = _foo.default;
-        exports.default = _default;
+        var _default = exports.default = _foo.default;
         module.exports = exports.default;
       `)
     },
@@ -115,17 +114,6 @@ export default tester(
       })
       expect((eslint.lintText('') |> await)[0].messages).toEqual([])
     },
-    functions: async () =>
-      expect(
-        transformAsync("import { endsWith } from '@dword-design/functions'", {
-          filename: 'index.js',
-          ...self(),
-        })
-          |> await
-          |> property('code'),
-      ).toEqual(
-        'import endsWith from "@dword-design/functions/dist/ends-with.js";',
-      ),
     'import assertion': async () => {
       await fs.outputFile('foo.json', JSON.stringify({}))
       expect(
@@ -210,23 +198,10 @@ export default tester(
           value: true
         });
         exports.default = void 0;
-        var _default = 1;
-        exports.default = _default;
+        var _default = exports.default = 1;
         module.exports = exports.default;
       `)
     },
-    'optional chaining': async () =>
-      expect(
-        transformAsync('export default foo?.bar', {
-          filename: 'index.js',
-          ...self(),
-        })
-          |> await
-          |> property('code'),
-      ).toEqual(endent`
-        var _foo;
-        export default (_foo = foo) === null || _foo === void 0 ? void 0 : _foo.bar;
-      `),
     'pipeline operator': async () =>
       expect(
         transformAsync('export default 1 |> x => x * 2', {

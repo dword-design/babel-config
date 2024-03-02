@@ -2,7 +2,6 @@ import { resolvePath } from 'babel-plugin-module-resolver'
 import packageName from 'depcheck-package-name'
 import { findUpSync } from 'find-up'
 import loadPkg from 'load-pkg'
-import { paramCase } from 'param-case'
 import P from 'path'
 
 export default () => {
@@ -37,15 +36,6 @@ export default () => {
           },
         },
       ],
-      [
-        packageName`babel-plugin-transform-imports`,
-        {
-          [packageName`@dword-design/functions`]: {
-            transform: importName =>
-              `@dword-design/functions/dist/${importName |> paramCase}.js`,
-          },
-        },
-      ],
       [packageName`babel-plugin-wildcard`, { exts: [] }],
       packageName`babel-plugin-macros`,
       packageName`@babel/plugin-syntax-import-assertions`,
@@ -55,7 +45,7 @@ export default () => {
         packageName`@babel/preset-env`,
         {
           ...(packageConfig.type === 'module' ? { modules: false } : {}),
-          targets: { node: 16 },
+          targets: { node: 18 },
         },
       ],
     ],
