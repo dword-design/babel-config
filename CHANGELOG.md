@@ -1,3 +1,16 @@
+# [4.0.0](https://github.com/dword-design/babel-config/compare/v3.0.2...v4.0.0) (2024-03-02)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#180](https://github.com/dword-design/babel-config/issues/180)) ([f87c60d](https://github.com/dword-design/babel-config/commit/f87c60d14fc3b814f30d35eac996901169b8c87e))
+
+
+### BREAKING CHANGES
+
+* node.js >= 18
+* drop functions transform
+
 ## [3.0.2](https://github.com/dword-design/babel-config/compare/v3.0.1...v3.0.2) (2023-07-03)
 
 
