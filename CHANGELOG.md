@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/dword-design/babel-config/compare/v4.0.0...v4.0.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v6 ([#183](https://github.com/dword-design/babel-config/issues/183)) ([79385b3](https://github.com/dword-design/babel-config/commit/79385b301711a32774cc318d7ced4dc7fe33d604))
+
 # [4.0.0](https://github.com/dword-design/babel-config/compare/v3.0.2...v4.0.0) (2024-03-02)
 
 
