@@ -1246,6 +1246,23 @@
     load-pkg "npm:@dword-design/load-pkg"
     param-case "^3.0.3"
 
+"@dword-design/babel-config@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/babel-config/-/babel-config-4.0.0.tgz#b32bf30164f882a8978cb1ca21fc96feb065d372"
+  integrity sha512-Db2XVUkmaV4nssMsmlZxvlUKpOhGPjdtOwRUnnJD3QRzYj71sAa9zVADQvWTNH4g8nGQNTayqZBl7tMAewhP3g==
+  dependencies:
+    "@babel/plugin-proposal-pipeline-operator" "^7.5.0"
+    "@babel/plugin-syntax-import-assertions" "^7.20.0"
+    "@babel/preset-env" "^7.6.3"
+    babel-plugin-add-module-exports "^1.0.4"
+    babel-plugin-macros "^3.0.1"
+    babel-plugin-module-resolver "^5.0.0"
+    babel-plugin-wildcard "npm:@dword-design/babel-plugin-wildcard"
+    depcheck-package-name "^3.0.0"
+    find-up "^7.0.0"
+    jiti "^1.18.2"
+    load-pkg "npm:@dword-design/load-pkg"
+
 "@dword-design/base-config-node@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@dword-design/base-config-node/-/base-config-node-2.0.1.tgz#dd23ab49704b4d7714a0f1ffa4e06deb7d8085cf"
@@ -1264,17 +1281,17 @@
     micromatch "^4.0.2"
 
 "@dword-design/base@^11.0.5":
-  version "11.0.5"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-11.0.5.tgz#d6762b0683246b2294d7cd31eee3b49d9d285eb5"
-  integrity sha512-EM68TfTMymY7s2duBxk3q/nGUblec8l+ssg+c0y5Azygu4hE0DsHRAEmJMX53FvyIVwId428Z1dRn5u0VuODsQ==
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-11.0.6.tgz#dd472a595575372ca34b53b31df336c4aeec5d30"
+  integrity sha512-dOiC1MP8bboNKK1PFdWxX6JTeQbsMwX7X0Stj7nY5m4kFH8Dy8VfYUeGsdhkTfSAqp3Idjko+7jL3sDFSEHHZQ==
   dependencies:
     "@commitlint/cli" "^18.4.4"
     "@commitlint/config-conventional" "^18.4.4"
-    "@dword-design/babel-config" "^3.0.0"
+    "@dword-design/babel-config" "^4.0.0"
     "@dword-design/base-config-node" "^2.0.0"
     "@dword-design/ci" "^4.0.0"
     "@dword-design/eslint-config" "^5.0.0"
-    "@dword-design/functions" "^5.0.20"
+    "@dword-design/functions" "^6.0.0"
     "@dword-design/jiti-babel-transform" "^1.0.7"
     "@dword-design/personal-data" "^2.0.3"
     "@dword-design/pretest" "^1.0.0"
@@ -1372,14 +1389,15 @@
     objectorarray "^1.0.3"
 
 "@dword-design/eslint-config@^5.0.0":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-5.0.1.tgz#860ec6dc52294d481fd1ab7e8801dcacb49c2cb8"
-  integrity sha512-BA1C6YJS0cT3SKNHFk/l0pHlz/zI1hTAwL8FTKeqqzuCmNBT86DD3B1BC9bc9WY5/XK84PDfW4Q7T+Zyhej5BA==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@dword-design/eslint-config/-/eslint-config-5.0.3.tgz#44c2580483971d3aca26bbc48e905be4fb6edbbe"
+  integrity sha512-JMPqMKOnMuxhz7gS/SaI+BjKWAQLuxRfxWtqcgDjzkw+0pxsJxNTuxN1AOP78Xidv2JCFzAOgBZvd1ZTZu/LHw==
   dependencies:
     "@babel/eslint-parser" "^7.13.14"
     "@dword-design/babel-config" "^3.0.0"
     "@dword-design/eslint-plugin-import-alias" "^4.0.8"
     "@dword-design/functions" "^5.0.22"
+    confusing-browser-globals "^1.0.11"
     depcheck-package-name "^3.0.0"
     eslint-config-airbnb-base "^15.0.0"
     eslint-config-prettier "^9.1.0"
@@ -1397,6 +1415,7 @@
     eslint-plugin-vue "^9.10.0"
     jiti "^1.18.2"
     load-pkg "^4.0.0"
+    lodash-es "^4.17.21"
     prettier "^3.2.4"
     vue-eslint-parser "^9.1.1"
 
@@ -1421,13 +1440,23 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/functions@^5", "@dword-design/functions@^5.0.0", "@dword-design/functions@^5.0.12", "@dword-design/functions@^5.0.20", "@dword-design/functions@^5.0.22", "@dword-design/functions@^5.0.23":
+"@dword-design/functions@^5", "@dword-design/functions@^5.0.0", "@dword-design/functions@^5.0.12", "@dword-design/functions@^5.0.22", "@dword-design/functions@^5.0.23":
   version "5.0.27"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.27.tgz#a609129207ec37abc0fae6aee26872166e409fc6"
   integrity sha512-16A97RKtn21xLWI7Y7VhFz4WCWui+TLit/J5/l77BDpWmPi2LzgjQzDbafDDw7OUeY6GEAi/M4jdbuQhsIbSEg==
   dependencies:
     "@dword-design/endent" "^1.0.0"
     delay "^5.0.0"
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
+"@dword-design/functions@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-6.0.0.tgz#e2bdbf4b813f4dad9fb17596314d6e7b8a039723"
+  integrity sha512-22X9eviXAbaz8xdYrp5Tj6KjDPiT+m3fppAP+wEqA3gecAlCyExABesA1bEZ57aXrXrbhNk88M8PvdAO/PLg3A==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^6.0.0"
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1665,9 +1694,9 @@
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
 "@jridgewell/trace-mapping@^0.3.12", "@jridgewell/trace-mapping@^0.3.17", "@jridgewell/trace-mapping@^0.3.24":
-  version "0.3.24"
-  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.24.tgz#e5640be1cab4085e4012a94c132ae86138f90f48"
-  integrity sha512-+VaWXDa6+l6MhflBvVXjIEAzb59nQ2JUK3bwRp2zRpPtU+8TFRy9Gg/5oIcNlkEL5PGlBFGfemUVvIgLnTzq7Q==
+  version "0.3.25"
+  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.25.tgz#15f190e98895f3fc23276ee14bc76b675c2e50f0"
+  integrity sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
@@ -3188,9 +3217,9 @@ camelcase@^6.0.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001587:
-  version "1.0.30001591"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001591.tgz#16745e50263edc9f395895a7cd468b9f3767cf33"
-  integrity sha512-PCzRMei/vXjJyL5mJtzNiUCKP59dm8Apqc3PH8gJkMnMXZGox93RbE76jHsmLwmIo6/3nsYIpJtx0O7u5PqFuQ==
+  version "1.0.30001593"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001593.tgz#7cda1d9e5b0cad6ebab4133b1f239d4ea44fe659"
+  integrity sha512-UWM1zlo3cZfkpBysd7AS+z+v007q9G1+fLTUU42rQnY6t2axoogPW/xol6T7juU5EUoOhML4WgBIdG+9yYqAjQ==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -3532,7 +3561,7 @@ config-chain@^1.1.11:
     ini "^1.3.4"
     proto-list "~1.2.1"
 
-confusing-browser-globals@^1.0.10:
+confusing-browser-globals@^1.0.10, confusing-browser-globals@^1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
@@ -3844,6 +3873,11 @@ delay@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/delay/-/delay-5.0.0.tgz#137045ef1b96e5071060dd5be60bf9334436bd1d"
   integrity sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==
+
+delay@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/delay/-/delay-6.0.0.tgz#43749aefdf6cabd9e17b0d00bd3904525137e607"
+  integrity sha512-2NJozoOHQ4NuZuVIr5CWd0iiLVIRSDepakaovIN+9eIDHEhdCAEvSy2cuf1DCrPPQLvHmbqTHODlhHg8UCy4zw==
 
 delete-empty@^3.0.0:
   version "3.0.0"
@@ -7415,9 +7449,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 magic-string@^0.30.7:
-  version "0.30.7"
-  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.7.tgz#0cecd0527d473298679da95a2d7aeb8c64048505"
-  integrity sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==
+  version "0.30.8"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.8.tgz#14e8624246d2bedba70d5462aa99ac9681844613"
+  integrity sha512-ISQTe55T2ao7XtlAStud6qwYPZjE4GK1S/BeVPus4jrq6JuOnQ00YKQC581RWhR122W7msZV263KzVeLoqidyQ==
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.15"
 
@@ -10721,9 +10755,9 @@ wide-align@^1.1.5:
     string-width "^1.0.2 || 2 || 3 || 4"
 
 with-local-tmp-dir@^5.0.0:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/with-local-tmp-dir/-/with-local-tmp-dir-5.0.1.tgz#5fa0570e1560008c6089c8f6759a5236f7af4a28"
-  integrity sha512-Ds8Ssl9sfMZArPBlSkEQwxh+EVq3IG8lWxTUipe1ZxP5eNNrkRC622ukpAkhR63jCSu5mvqJ/3bEl1RakRZufw==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/with-local-tmp-dir/-/with-local-tmp-dir-5.1.0.tgz#275adb0f619e70466df7f76ccf0e39035dede24b"
+  integrity sha512-hjOdNpgPyO1mX880ojVlO0mCqNYghnzyn7TRUN1llHVX9N6uEBOzJteEz16v0HRmdP+AWZMPn+NtIRy9lMPUxg==
   dependencies:
     "@dword-design/chdir" "^2.0.0"
     tmp-promise "^3.0.0"
