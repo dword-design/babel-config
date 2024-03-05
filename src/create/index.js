@@ -1,17 +1,31 @@
 import { resolvePath } from 'babel-plugin-module-resolver'
 import packageName from 'depcheck-package-name'
 import { findUpSync } from 'find-up'
+import fs from 'fs-extra'
 import loadPkg from 'load-pkg'
 import P from 'path'
 
 export default () => {
   const packageConfig = loadPkg.sync() || {}
 
+  const baseConfig = fs.existsSync('.baserc.json')
+    ? fs.readJsonSync('.baserc.json')
+    : {}
+
+  const pipelineOperatorProposal =
+    baseConfig.pipelineOperatorProposal || 'fsharp'
+
+  const pipelineOperatorTopicToken =
+    baseConfig.pipelineOperatorTopicToken || '%'
+
   return {
     plugins: [
       [
         packageName`@babel/plugin-proposal-pipeline-operator`,
-        { proposal: 'fsharp' },
+        {
+          proposal: pipelineOperatorProposal,
+          topicToken: pipelineOperatorTopicToken,
+        },
       ],
       ...(packageConfig.type === 'module'
         ? []

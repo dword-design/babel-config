@@ -214,6 +214,23 @@ export default tester(
         var _;
         export default (_ = 1, _ * 2);
       `),
+    'pipeline operator proposal': async () => {
+      await fs.outputFile(
+        '.baserc.json',
+        JSON.stringify({
+          pipelineOperatorProposal: 'hack',
+          pipelineOperatorTopicToken: '%',
+        }),
+      )
+      expect(
+        transformAsync('export default 1 |> % * 3', {
+          filename: 'index.js',
+          ...self(),
+        })
+          |> await
+          |> property('code'),
+      ).toEqual('export default 1 * 3;')
+    },
     'subdir and esm': async () => {
       await fs.ensureDir('sub')
       await chdir('sub', async () => {
@@ -233,7 +250,10 @@ export default tester(
     {
       before: () => execaCommand('base prepublishOnly'),
       beforeEach: () =>
-        fs.outputFile('package.json', JSON.stringify({ type: 'module' })),
+        outputFiles({
+          '.baserc.json': JSON.stringify({}),
+          'package.json': JSON.stringify({ type: 'module' }),
+        }),
     },
   ],
 )
