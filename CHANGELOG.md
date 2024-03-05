@@ -1,3 +1,10 @@
+# [4.1.0](https://github.com/dword-design/babel-config/compare/v4.0.1...v4.1.0) (2024-03-05)
+
+
+### Features
+
+* customize pipeline operator ([f4bb9f0](https://github.com/dword-design/babel-config/commit/f4bb9f02ab52d269bca459801abdcc129e2bbeae))
+
 ## [4.0.1](https://github.com/dword-design/babel-config/compare/v4.0.0...v4.0.1) (2024-03-04)
 
 
