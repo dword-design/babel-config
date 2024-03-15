@@ -202,6 +202,20 @@ export default tester(
         module.exports = exports.default;
       `)
     },
+    'partial application': async () =>
+      expect(
+        transformAsync('export default foo(?, 1)', {
+          filename: 'index.js',
+          ...self(),
+        })
+          |> await
+          |> property('code'),
+      ).toEqual(endent`
+        var _foo;
+        export default (_foo = foo, function foo(_argPlaceholder) {
+          return _foo(_argPlaceholder, 1);
+        });
+      `),
     'pipeline operator': async () =>
       expect(
         transformAsync('export default 1 |> x => x * 2', {

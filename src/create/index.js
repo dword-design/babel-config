@@ -27,6 +27,7 @@ export default () => {
           topicToken: pipelineOperatorTopicToken,
         },
       ],
+      packageName`@babel/plugin-proposal-partial-application`,
       ...(packageConfig.type === 'module'
         ? []
         : [packageName`babel-plugin-add-module-exports`]),
