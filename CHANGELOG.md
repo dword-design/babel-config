@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/dword-design/babel-config/compare/v4.1.0...v4.2.0) (2024-03-15)
+
+
+### Features
+
+* lock file maintenance, partial application ([#185](https://github.com/dword-design/babel-config/issues/185)) ([82204e7](https://github.com/dword-design/babel-config/commit/82204e74af6695a6fb59e693eac284dc55032b90))
+
 # [4.1.0](https://github.com/dword-design/babel-config/compare/v4.0.1...v4.1.0) (2024-03-05)
 
 
