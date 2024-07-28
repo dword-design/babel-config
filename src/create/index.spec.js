@@ -1,16 +1,16 @@
-import { transformAsync } from '@babel/core'
-import chdir from '@dword-design/chdir'
-import { endent, property } from '@dword-design/functions'
-import tester from '@dword-design/tester'
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import packageName from 'depcheck-package-name'
-import { ESLint } from 'eslint'
-import { execaCommand } from 'execa'
-import fs from 'fs-extra'
-import outputFiles from 'output-files'
-import P from 'path'
+import { transformAsync } from '@babel/core';
+import chdir from '@dword-design/chdir';
+import { endent, property } from '@dword-design/functions';
+import tester from '@dword-design/tester';
+import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import packageName from 'depcheck-package-name';
+import { ESLint } from 'eslint';
+import { execaCommand } from 'execa';
+import fs from 'fs-extra';
+import outputFiles from 'output-files';
+import P from 'path';
 
-import self from './index.js'
+import self from './index.js';
 
 export default tester(
   {
@@ -18,7 +18,8 @@ export default tester(
       await fs.outputFile(
         P.join('src', 'package.json'),
         JSON.stringify({ type: 'module' }),
-      )
+      );
+
       expect(
         transformAsync("import '@/foo'", {
           filename: P.join('src', 'index.js'),
@@ -26,10 +27,11 @@ export default tester(
         })
           |> await
           |> property('code'),
-      ).toEqual('import "./foo";')
+      ).toEqual('import "./foo";');
     },
     'alias: root': async () => {
-      await fs.outputFile('.root', '')
+      await fs.outputFile('.root', '');
+
       expect(
         transformAsync("import '@/foo'", {
           filename: 'index.js',
@@ -37,13 +39,14 @@ export default tester(
         })
           |> await
           |> property('code'),
-      ).toEqual('import "./foo";')
+      ).toEqual('import "./foo";');
     },
     'alias: root behind cwd': async () => {
       await outputFiles({
         '.root': '',
         'sub/package.json': JSON.stringify({ type: 'module' }),
-      })
+      });
+
       await chdir('sub', async () =>
         expect(
           transformAsync("import '@/sub/a/foo'", {
@@ -53,7 +56,7 @@ export default tester(
             |> await
             |> property('code'),
         ).toEqual('import "../a/foo";'),
-      )
+      );
     },
     'alias: valid': async () =>
       expect(
@@ -65,15 +68,18 @@ export default tester(
           |> property('code'),
       ).toEqual('import "../src/bar";'),
     cli: async () => {
-      await fs.outputFile('index.js', 'export default 1')
+      await fs.outputFile('index.js', 'export default 1');
+
       await fs.outputFile(
         '.babelrc.json',
         JSON.stringify({ extends: '../src/index.js' }),
-      )
-      await execaCommand('babel index.js')
+      );
+
+      await execaCommand('babel index.js');
     },
     commonjs: async () => {
-      await fs.outputFile('package.json', JSON.stringify({}))
+      await fs.outputFile('package.json', JSON.stringify({}));
+
       expect(
         transformAsync(
           endent`
@@ -96,10 +102,10 @@ export default tester(
         });
         exports.default = void 0;
         var _foo = _interopRequireDefault(require("./src/foo"));
-        function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+        function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
         var _default = exports.default = _foo.default;
         module.exports = exports.default;
-      `)
+      `);
     },
     'eslint parser': async () => {
       const eslint = new ESLint({
@@ -111,11 +117,13 @@ export default tester(
             },
           },
         },
-      })
-      expect((eslint.lintText('') |> await)[0].messages).toEqual([])
+      });
+
+      expect((eslint.lintText('') |> await)[0].messages).toEqual([]);
     },
     'import assertion': async () => {
-      await fs.outputFile('foo.json', JSON.stringify({}))
+      await fs.outputFile('foo.json', JSON.stringify({}));
+
       expect(
         transformAsync("import './foo.json' assert { type: 'json' }", {
           filename: 'index.js',
@@ -123,7 +131,7 @@ export default tester(
         })
           |> await
           |> property('code'),
-      ).toEqual('import "./foo.json" assert { type: \'json\' };')
+      ).toEqual('import "./foo.json" assert { type: \'json\' };');
     },
     'import: wildcard directory': async () => {
       await outputFiles({
@@ -131,7 +139,8 @@ export default tester(
           'bar.js': 'export default 1',
           'baz.js': 'export default 2',
         },
-      })
+      });
+
       expect(
         transformAsync("import * as foo from './foo'", {
           filename: 'index.js',
@@ -145,7 +154,7 @@ export default tester(
         foo["Baz"] = _wcImport2;
         import _wcImport from "./foo/bar.js";
         foo["Bar"] = _wcImport;
-      `)
+      `);
     },
     'import: wildcard index.js': async () => {
       await outputFiles({
@@ -158,7 +167,8 @@ export default tester(
             export { Bar }
           `,
         },
-      })
+      });
+
       expect(
         transformAsync("import * as foo from './foo'", {
           filename: 'index.js',
@@ -166,10 +176,11 @@ export default tester(
         })
           |> await
           |> property('code'),
-      ).toEqual('import * as foo from "./foo";')
+      ).toEqual('import * as foo from "./foo";');
     },
     macro: async () => {
-      await fs.outputFile('package.json', JSON.stringify({}))
+      await fs.outputFile('package.json', JSON.stringify({}));
+
       await fs.outputFile(
         'foo.macro.js',
         endent`
@@ -179,7 +190,8 @@ export default tester(
             context.references.default[0].replaceWith(context.babel.types.numericLiteral(1))
           )
         `,
-      )
+      );
+
       expect(
         transformAsync(
           endent`
@@ -200,7 +212,7 @@ export default tester(
         exports.default = void 0;
         var _default = exports.default = 1;
         module.exports = exports.default;
-      `)
+      `);
     },
     'partial application': async () =>
       expect(
@@ -235,7 +247,8 @@ export default tester(
           pipelineOperatorProposal: 'hack',
           pipelineOperatorTopicToken: '%',
         }),
-      )
+      );
+
       expect(
         transformAsync('export default 1 |> % * 3', {
           filename: 'index.js',
@@ -243,10 +256,11 @@ export default tester(
         })
           |> await
           |> property('code'),
-      ).toEqual('export default 1 * 3;')
+      ).toEqual('export default 1 * 3;');
     },
     'subdir and esm': async () => {
-      await fs.ensureDir('sub')
+      await fs.ensureDir('sub');
+
       await chdir('sub', async () => {
         expect(
           transformAsync('export default 1', {
@@ -255,8 +269,8 @@ export default tester(
           })
             |> await
             |> property('code'),
-        ).toEqual('export default 1;')
-      })
+        ).toEqual('export default 1;');
+      });
     },
   },
   [
@@ -270,4 +284,4 @@ export default tester(
         }),
     },
   ],
-)
+);

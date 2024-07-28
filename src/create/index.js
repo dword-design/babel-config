@@ -1,22 +1,22 @@
-import { resolvePath } from 'babel-plugin-module-resolver'
-import packageName from 'depcheck-package-name'
-import { findUpSync } from 'find-up'
-import fs from 'fs-extra'
-import loadPkg from 'load-pkg'
-import P from 'path'
+import { resolvePath } from 'babel-plugin-module-resolver';
+import packageName from 'depcheck-package-name';
+import { findUpSync } from 'find-up';
+import fs from 'fs-extra';
+import loadPkg from 'load-pkg';
+import P from 'path';
 
 export default () => {
-  const packageConfig = loadPkg.sync() || {}
+  const packageConfig = loadPkg.sync() || {};
 
   const baseConfig = fs.existsSync('.baserc.json')
     ? fs.readJsonSync('.baserc.json')
-    : {}
+    : {};
 
   const pipelineOperatorProposal =
-    baseConfig.pipelineOperatorProposal || 'fsharp'
+    baseConfig.pipelineOperatorProposal || 'fsharp';
 
   const pipelineOperatorTopicToken =
-    baseConfig.pipelineOperatorTopicToken || '%'
+    baseConfig.pipelineOperatorTopicToken || '%';
 
   return {
     plugins: [
@@ -40,14 +40,13 @@ export default () => {
           resolvePath: (sourcePath, currentFile, options) => {
             const rootPath = findUpSync(['package.json', '.root'], {
               cwd: P.dirname(currentFile),
-            })
+            });
 
-            const rootDir = rootPath ? P.dirname(rootPath) : undefined
-
+            const rootDir = rootPath ? P.dirname(rootPath) : undefined;
             return resolvePath(sourcePath, currentFile, {
               ...options,
               cwd: rootDir,
-            })
+            });
           },
         },
       ],
@@ -64,5 +63,5 @@ export default () => {
         },
       ],
     ],
-  }
-}
+  };
+};

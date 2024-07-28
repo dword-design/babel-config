@@ -28,12 +28,12 @@
     "babel-plugin-add-module-exports": "^1.0.4",
     "babel-plugin-macros": "^3.0.1",
     "babel-plugin-module-resolver": "^5.0.0",
-    "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard",
+    "babel-plugin-wildcard": "npm:@dword-design/babel-plugin-wildcard@^0",
     "depcheck-package-name": "^3.0.0",
     "find-up": "^7.0.0",
     "fs-extra": "^11.1.0",
     "jiti": "^1.18.2",
-    "load-pkg": "npm:@dword-design/load-pkg"
+    "load-pkg": "npm:@dword-design/load-pkg@^4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
