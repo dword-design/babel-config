@@ -1,13 +1,14 @@
+import P from 'node:path';
+
 import { loadConfigSync } from '@dword-design/base';
 import { resolvePath } from 'babel-plugin-module-resolver';
 import packageName from 'depcheck-package-name';
 import { findUpSync } from 'find-up';
 import loadPkg from 'load-pkg';
-import P from 'path';
 
 export default () => {
   const packageConfig = loadPkg.sync() || {};
-  const baseConfig = loadConfigSync();
+  const baseConfig = loadConfigSync() || {};
 
   const pipelineOperatorProposal =
     baseConfig.pipelineOperatorProposal || 'fsharp';
@@ -31,9 +32,7 @@ export default () => {
       [
         'babel-plugin-module-resolver',
         {
-          alias: {
-            '@': '.',
-          },
+          alias: { '@': '.' },
           resolvePath: (sourcePath, currentFile, options) => {
             const rootPath = findUpSync(['package.json', '.root'], {
               cwd: P.dirname(currentFile),
