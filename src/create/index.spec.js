@@ -1,14 +1,15 @@
+import P from 'node:path';
+
 import { transformAsync } from '@babel/core';
+import babelParser from '@babel/eslint-parser';
 import chdir from '@dword-design/chdir';
 import { endent, property } from '@dword-design/functions';
 import tester from '@dword-design/tester';
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
-import packageName from 'depcheck-package-name';
 import { ESLint } from 'eslint';
 import { execaCommand } from 'execa';
 import fs from 'fs-extra';
 import outputFiles from 'output-files';
-import P from 'path';
 
 import self from './index.js';
 
@@ -33,10 +34,7 @@ export default tester(
       await fs.outputFile('.root', '');
 
       expect(
-        transformAsync("import '@/foo'", {
-          filename: 'index.js',
-          ...self(),
-        })
+        transformAsync("import '@/foo'", { filename: 'index.js', ...self() })
           |> await
           |> property('code'),
       ).toEqual('import "./foo";');
@@ -87,10 +85,7 @@ export default tester(
 
             export default foo
           `,
-          {
-            filename: 'index.js',
-            ...self(),
-          },
+          { filename: 'index.js', ...self() },
         )
           |> await
           |> property('code'),
@@ -110,13 +105,12 @@ export default tester(
     'eslint parser': async () => {
       const eslint = new ESLint({
         overrideConfig: {
-          parser: packageName`@babel/eslint-parser`,
-          parserOptions: {
-            babelOptions: {
-              configFile: '..',
-            },
+          languageOptions: {
+            parser: babelParser,
+            parserOptions: { babelOptions: { configFile: '..' } },
           },
         },
+        overrideConfigFile: true,
       });
 
       expect((eslint.lintText('') |> await)[0].messages).toEqual([]);
@@ -135,10 +129,7 @@ export default tester(
     },
     'import: wildcard directory': async () => {
       await outputFiles({
-        foo: {
-          'bar.js': 'export default 1',
-          'baz.js': 'export default 2',
-        },
+        foo: { 'bar.js': 'export default 1', 'baz.js': 'export default 2' },
       });
 
       expect(
