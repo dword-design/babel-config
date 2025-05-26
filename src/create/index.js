@@ -1,16 +1,13 @@
+import { loadConfigSync } from '@dword-design/base';
 import { resolvePath } from 'babel-plugin-module-resolver';
 import packageName from 'depcheck-package-name';
 import { findUpSync } from 'find-up';
-import fs from 'fs-extra';
 import loadPkg from 'load-pkg';
 import P from 'path';
 
 export default () => {
   const packageConfig = loadPkg.sync() || {};
-
-  const baseConfig = fs.existsSync('.baserc.json')
-    ? fs.readJsonSync('.baserc.json')
-    : {};
+  const baseConfig = loadConfigSync();
 
   const pipelineOperatorProposal =
     baseConfig.pipelineOperatorProposal || 'fsharp';
